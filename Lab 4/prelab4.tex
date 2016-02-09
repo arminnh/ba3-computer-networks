@@ -1,0 +1,28 @@
+%!TEX root = labo.tex
+
+\subsubsection*{Routing protocols}
+\begin{itemize}
+	\item \emph{Distance Vector and Link State Routing Protocols}: Go to the website \url{http://docwiki.cisco.com/wiki/Internetworking_Technology_Handbook} and read the article about dynamic routing protocols. Review your knowledge of interdomain and intradomain routing, distance vector routing, and link state routing.
+	\item \emph{Zebra}: Go to the website of the Zebra fork Quagga at \url{http://www.nongnu.org/quagga/} and study the information on the Quagga routing protocol software for Linux systems. Also find and read the man pages on zebra, ripd, ospfd and bgpd. Note: Quagga is a fork of the GNU Zebra project.
+	\item \emph{RIP}: Read the overview of the Routing Information Protocol (RIP) and study the commands to configure RIP on a Cisco router at \url{http://www.routeralley.com/guides/rip.pdf}.
+	\item \emph{OSPF}: Read the overview of Open Shortest Path First (OSPF) routing protocol and study the commands to configure OSPF on a Cisco router at \url{http://www.routeralley.com/guides/ospf.pdf}.
+\end{itemize}
+
+\newpage
+\subsubsection*{Prelab Questions}
+
+\begin{questions}
+	\q{1}{Provide the command that configures a Linux PC as an IP router (see Lab 3).}
+	\q{2}{What are the main differences between a distance vector routing protocol and a link state routing protocol? Give examples for each type of protocol.}
+	\q{3}{What are the differences between an intradomain routing protocol (also called interior gateway protocol or IGP) and an interdomain routing protocol (also called exterior gateway protocol or EGP)? Give examples for each type of protocol.}
+	\q{4}{Which routing protocols are supported by the software package Zebra?}
+	\q{5}{In the Zebra software package, the processes ripd, ospfd, and bgpd deal, respectively, with the routing protocols RIP, OSPF, and BGP. Which role does the process zebra play?}
+	\q{6}{Describe how a Linux user accesses the processes of Zebra (zebra, ripd, ospfd, bgpd) processes to configure routing algorithm parameters?}
+	\q{7}{What is the main difference between RIP version 1 (RIPv1) and RIP version 2 (RIPv2)?}
+	\q{8}{Explain what it means to ``run RIP in passive mode''.}
+	\q{9}{Explain the meaning of ``triggered updates'' in RIP.}
+	\q{10}{Explain the concept of split-horizon in RIP?}
+	\q{11}{What is an autonomous system (AS)? Which roles do autonomous systems play in the Internet?}
+	\q{12}{What is the AS number of your institution? Which autonomous system has AS number 1?}
+	\q{13}{Explain the terms: Stub AS, Multi-homed AS and Transit AS?}
+\end{questions}

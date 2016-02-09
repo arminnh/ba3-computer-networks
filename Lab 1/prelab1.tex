@@ -1,0 +1,32 @@
+%!TEX root = labo.tex
+\subsection*{Basic Linux commands}
+Before entering the lab, you should familiarise yourself with some basic Linux commands and the Wireshark network analyser tool.
+
+\subsubsection*{Man Pages}
+The PCs run the Linux operating system, a Unix-like operating system. This assignment asks you to review some Unix commands. Man pages exist on every lab machine. You can also find the manual pages (``man pages'') online at
+
+\qquad \url{http://manpages.ubuntu.com/}
+
+For each of the following commands, type the name of the command as a search term. The search will return the appropriate man page.
+
+Read the man pages of the following commands for the operating system version ``\osversion'':
+
+\qquad \cmd{man}, \cmd{pwd}, \cmd{ls}, \cmd{more}, \cmd{mv}, \cmd{cp}, \cmd{rm}, \cmd{mkdir}, \cmd{rmdir}, \cmd{chmod}, \cmd{kill}, \cmd{ping}, \cmd{tcpdump}
+
+\subsubsection*{Wireshark}
+The man page for Wireshark, a network analyser tool, can be found on every lab machine. You can also read about the Wireshark network analyzer at the website
+\url{https://www.wireshark.org/docs/}.
+Read the introduction and the manual pages of Wireshark.
+
+\newpage
+\subsection*{Prelab Questions}
+
+\begin{questions}
+	\q{1}{What will happen if you type \cmd{man man} in Linux?}
+	\q{2}{How can you use the command \cmd{ls} to find out about the size of file \path{/etc/fstab}?}
+	\q{3}{What happens if you have two files with names \path{file1} and \path{file2} and you type \cmd{mv file1 file2}? Which option of \cmd{mv} issues a warning in this situation?}
+	\q{4}{What is the command that you issue if you are in directory \path{/} and want to copy the file \path{/mydata} to directory \path{/labdata}?}
+	\q{5}{What is the command that you issue if you are in directory \path{/} and want to copy all files and directories under directory \path{/mydirectory} to directory \path{/newdirectory}?}
+	\q{6}{What happens if you type the command \cmd{rm *} in a directory?}
+	\q{7}{What is the command that you issue if you want to delete all files and directories under the directory \path{/mydirectory}?}
+\end{questions}

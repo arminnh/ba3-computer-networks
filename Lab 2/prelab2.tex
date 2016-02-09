@@ -1,0 +1,37 @@
+%!TEX root = labo.tex
+
+\subsubsection*{New commands}
+Read the manual pages of the following commands at \url{http://manpages.ubuntu.com/} for the operating system version ``\osversion'':
+\begin{itemize}
+	\item arp
+	\item ifconfig
+	\item netstat
+	\item tcpdump
+\end{itemize}
+
+\subsubsection*{IP Addresses}
+Read the article ``Understanding IP Addressing: Everything You Ever Wanted To Know'' by Chuck Semeria, at \url{http://holdenweb.com/static/docs/3comip.pdf}
+
+\subsubsection*{Wireshark capture and display filters}
+Go to the Wireshark website and read about capture filters and display filters for Wireshark:
+\begin{itemize} 
+	\item \url{http://wiki.wireshark.org/CaptureFilters}
+	\item \url{http://www.wireshark.org/docs/wsug_html_chunked/ChWorkBuildDisplayFilterSection.html}.
+\end{itemize}
+
+\newpage
+\subsection*{Prelab Questions}
+
+\begin{questions}
+	\q{1}{Write the syntax for an \cmd{ifconfig} command that sets the IP address of the interface \iface{eth0} to 128.143.2.3/16 with broadcast address 128.143.255.255.}
+	\q{2}{Write the syntax of a \cmd{tcpdump} command that captures packets containing IP datagrams with source or destination IP address equal to 10.0.1.12.}
+	\q{3}{Write the syntax of a \cmd{tcpdump} command that captures packets containing ICMP messages with source or destination IP address equal to 10.0.1.12.}
+	\q{4}{Write the syntax of a \cmd{tcpdump} command that captures packets containing IP datagrams between two hosts with IP addresses 10.0.1.11 and 10.0.1.12, both on interface \iface{eth1}.}
+	\q{5}{Write a \cmd{tcpdump} filter expression that captures packets containing TCP segments with source or destination IP address equal to 10.0.1.12.}
+	\q{6}{Write a \cmd{tcpdump} filter expression that, in addition to the constraints in Question 5, only captures packets using port number 23.}
+	\q{7}{Write the syntax for a \cmd{wireshark} command with capture filter so that all IP datagrams with source or destination IP address equal to 10.0.1.12 are recorded.}
+	\q{8}{Write the syntax for a Wireshark display filter that shows IP datagrams with destination IP address equal to 10.0.1.50 and frame sizes greater than 400 bytes.}
+	\q{9}{Write the syntax for a Wireshark display filter that shows packets containing ICMP messages with source or destination IP address equal to 10.0.1.12 and frame numbers between 15 and 30.}
+	\q{10}{Write the syntax for a Wireshark display filter that shows packets containing TCP segments with source or destination IP address equal to 10.0.1.12 and using port number 23.}
+	\q{11}{Write a Wireshark capture filter expression for Question 10.}
+\end{questions}

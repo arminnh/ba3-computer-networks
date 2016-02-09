@@ -1,0 +1,55 @@
+%!TEX root = labo.tex
+
+\subsubsection*{NAT and DHCP}
+Use the following resources to prepare yourself for this lab session:
+\begin{enumerate}
+	\item Unix commands for NAT, DHCP: Go to the online manual pages at \url{http://manpages.ubuntu.com/}. Read the manual pages of the following commands for the operating system version "trusty 14.04 LTS":
+		\begin{itemize}
+			\item iptables
+			\item dhclient
+			\item dhcpd
+			\item dhcpd.conf
+			\item dhcp-options
+			\item dhcpd.leases
+		\end{itemize}
+	\item Private IP addresses: Read RFC 1918 on address allocation in private networks \url{http://tools.ietf.org/html/rfc1918}.
+	\item Network Address Translation (NAT): Read the following tutorial on NAT at \url{http://www.firewall.cx/networking-topics/network-address-translation-nat.html}.
+	\item Netfilter/iptables Read about netfilter and iptables at \url{http://www.netfilter.org} and \url{http://www.thegeekstuff.com/2011/01/iptables-fundamentals/}.
+	\item Dynamic Host Configuration Protocol (DHCP): Read RFC 2131 on DHCP at \url{http://tools.ietf.org/html/rfc2131}.
+\end{enumerate}
+
+\newpage
+\subsection*{Prelab Questions}
+\begin{questions}
+	\q{1}{Explain why NAT is often mentioned as a solution to counteract the depletion of IP addresses on the global Internet? Which alternatives to NAT exist that address the scarcity of available IP addresses?}
+	\q{2}{What does the following comment refer to: ``NAT destroys the ability to do host-to-host communication over the Internet``?}
+\end{questions}
+
+Explain the following terms which are used in the context of Network Address Translation:
+\begin{questions}
+	\q{3.a}{Static NAT}
+	\q{3.b}{Dynamic NAT}
+	\q{3.c}{NAT with IP overload}
+	\q{3.d}{Port Address Translations e.g. IP Masquerading}
+	\q{4}{Refer to RFC 1918 and list the IP address blocks that are reserved for use in private networks. Why is there a need to specify IP addresses for private networks?}	
+	\q{5}{The utility netfilter and the command iptables provide support for NAT in Linux systems. Explain the relationship between the netfilter utility and the iptables command?}
+\end{questions}
+
+Describe the following terms which are used in the iptables command:
+\begin{questions}
+	\q{6.a}{Chain}
+	\q{6.b}{Postrouting }
+	\q{6.c}{Prerouting}
+\end{questions}
+
+Consider a NAT device between a private and the public network. Suppose the private network uses addresses in the range 10.0.1.0-10.0.1.255, and suppose that the interface of the NAT device to the public network has IP address 128.143.136.80.
+\begin{questions}
+	\q{7.a}{Write the iptables command so that the addresses in the private network are mapped to the public IP address 128.143.136.80.}
+	\q{7.b}{Write an IOS command so that the addresses in the private network are mapped to the public IP address 128.143.136.80.}
+\end{questions}
+
+Answer the following questions about DHCP:
+\begin{questions}
+	\q{8}{Explain the meaning of the ``magic cookie'' in the DHCP protocol.}
+	\q{9}{If the command \cmd{dhcpd} is issued (without arguments) on a Linux PC with multiple network interfaces, which network interfaces does the DHCP server listen on?}
+\end{questions}

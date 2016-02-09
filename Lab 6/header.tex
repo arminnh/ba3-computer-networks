@@ -1,0 +1,247 @@
+%!TEX root = labo.tex
+
+\documentclass[a4paper,onecolumn,10pt]{memoir}
+\usepackage{subfig}
+\usepackage{cite} 
+\usepackage[pdftex]{graphicx} 
+\usepackage{amssymb} 
+\usepackage{amsmath} 
+\usepackage[draft]{fixme} 
+\usepackage{a4wide} 
+\usepackage[printonlyused]{acronym} 
+\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref} 
+\newsubfloat{figure}
+\usepackage{xspace} 
+\usepackage{array} 
+\usepackage{helvet} 
+\usepackage{ifthen}
+\usepackage{forloop}
+\usepackage{longtable}
+\usepackage{boxedminipage}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{fancyvrb}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage[inline]{enumitem}
+\usepackage{framed}
+\usepackage{titlesec}
+\usepackage{calc}
+\usepackage[T1]{fontenc}
+
+\titleformat{\subsection}{\large\bfseries}{Part \arabic{subsection}.}{0.7em}{}
+\setsecnumdepth{subsection}
+\maxtocdepth{subsection}
+
+\newboolean{Solutions} \setboolean{Solutions}{true}
+
+\setlength{\parindent}{0pt}
+
+\renewcommand{\chaptername}{Lab}
+
+\newcommand{\stress}[1]{\emph{\textbf{#1}}} 
+\newcommand{\iface}[1]{\emph{#1}}
+\newcommand{\osversion}{trusty 14.04 LTS}
+%\newcommand{\cmd}[1]{\texttt{#1}}
+%\newcommand{\command}[1]{\texttt{#1}\newline} 
+\newcommand{\incommand}[1]{\texttt{#1}}
+%\newcounter{filecount}[section] 
+%\newcommand{\file}[2]{\texttt{/mnt/usb/#1\stepcounter{filecount}\arabic{filecount}.#2}} 
+%\newcommand{\curfile}[2]{\texttt{/mnt/usb/#1\arabic{filecount}.#2}} 
+\newcommand{\remark}{\includegraphics{images/remark.pdf}}
+%\newcommand{\report}{ \includegraphics{images/report.pdf}}
+
+\newcommand*{\boxerror}[1]{\par\begin{minipage}[t][][c]{1.0cm}\includegraphics[width=0.6cm]{images/error.pdf}\end{minipage}\addtolength{\linewidth}{-1.0cm}\begin{minipage}[t][][c]{\linewidth}\emph{#1}\end{minipage}\addtolength{\linewidth}{+1.0cm}}
+\newcommand*{\boxwarning}[1]{\par\begin{minipage}[t][][c]{1.0cm}\includegraphics[width=0.6cm]{images/warning.pdf}\end{minipage}\addtolength{\linewidth}{-1.0cm}\begin{minipage}[t][][c]{\linewidth}\emph{#1}\end{minipage}\addtolength{\linewidth}{+1.0cm}}
+\newcommand*{\boxquestion}[1]{\par\begin{minipage}[t][][c]{1.0cm}\includegraphics[width=0.6cm]{images/question.pdf}\end{minipage}\addtolength{\linewidth}{-1.0cm}\begin{minipage}[t][][c]{\linewidth}\emph{#1}\end{minipage}\addtolength{\linewidth}{+1.0cm}}
+\newcommand*{\boxinfo}[1]{\par\begin{minipage}[t][][c]{1.0cm}\includegraphics[width=0.6cm]{images/info.pdf}\end{minipage}\addtolength{\linewidth}{-1.0cm}\begin{minipage}[t][][c]{\linewidth}\emph{#1}\end{minipage}\addtolength{\linewidth}{+1.0cm}}
+
+\newcommand{\result}[1]{
+\begin{verbatim}
+	#1 
+\end{verbatim}
+} 
+\newcommand{\prompt}[1]{#1 voyage:\textasciitilde\#}
+
+\DefineVerbatimEnvironment%
+ {cmdblock}{Verbatim}
+ {gobble=1,frame=leftline,framerule=0.4mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% exercise environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcounter{Exercisecount}[chapter]
+\setcounter{Exercisecount}{0}
+\newenvironment{exercise}[1]
+{% This is the begin code
+\refstepcounter{Exercisecount} {\textbf {Exercise \arabic{Exercisecount}}}: #1
+}
+{% This is the end code
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% question counter environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{questioncount}[Exercisecount]
+\setcounter{questioncount}{0}
+
+%\newcommand{\answerlabel}{L\arabic{chapter}-\arabic{Exercisecount}-\arabic{questioncount}}
+
+\newcommand{\answer}[1]{
+\begin{tikzpicture}
+ 
+\node [fill=shade,rounded corners=5pt]
+{
+\refstepcounter{questioncount}
+\color{white}{\textbf{#1}}
+};
+\end{tikzpicture}
+}
+
+\newcommand{\includeanswer}[2]{\input{solutions/#2/#1.tex}}
+
+%Arg1: num of answer lines, arg2: question number, arg3: question
+\newcommand{\question}[3][2]
+{
+\begin{minipage}[t]{1.3cm}
+	\textbf{#2})
+\end{minipage}
+\begin{minipage}[t]{\linewidth-1.3cm}
+	#3
+	\begin{esolution}{#1}{#2}{\session}\end{esolution}
+\end{minipage}
+\vspace{0.3cm}
+}
+
+\newcommand{\setsession}[1]{\def\session{#1}}
+
+%% TODO: Can this replace all of the above?
+%\newcounter{QuestionSeriesTotal}\setcounter{QuestionSeriesTotal}{0}
+%\newcounter{QuestionSeriesCounter}\setcounter{QuestionSeriesCounter}{0}
+%\newcounter{QuestionSeriesTotalPrev}\setcounter{QuestionSeriesTotalPrev}{0}
+
+%\newcounter{QuestionSeriesLevel}\setcounter{QuestionSeriesLevel}{0}
+
+%\newcommand{\newquestionseries}[1]{\stepcounter{QuestionSeriesTotal}\setcounter{QuestionSeriesCounter}{#1}}
+
+%\newenvironment{questions}[1][]
+%	{
+%		\ifthenelse{\not \value{QuestionSeriesTotalPrev} = \value{QuestionSeriesTotal}}{
+%			\global\def\enumifmt{#1}
+%			\setcounter{QuestionSeriesTotalPrev}{\value{QuestionSeriesTotal}}
+%			\ifthenelse{\equal{#1}{A}}
+%				{\begin{enumerate}[label=\textbf{\arabic{QuestionSeriesCounter}.\Alph*)},ref=\arabic{QuestionSeriesCounter}.\Alph*,series=QuestionSeries.\arabic{QuestionSeriesTotal}]}
+%				{\ifthenelse{\equal{#1}{a}}
+%					{\begin{enumerate}[label=\textbf{\arabic{QuestionSeriesCounter}.\alph*)},ref=\arabic{QuestionSeriesCounter}.\alph*,series=QuestionSeries.\arabic{QuestionSeriesTotal}]}
+%					{\ifthenelse{\equal{#1}{I}}
+%						{\begin{enumerate}[label=\textbf{\arabic{QuestionSeriesCounter}.\Roman*)},ref=\arabic{QuestionSeriesCounter}.\Roman*,series=QuestionSeries.\arabic{QuestionSeriesTotal}]}
+%						{\ifthenelse{\equal{#1}{i}}
+%							{\begin{enumerate}[label=\textbf{\arabic{QuestionSeriesCounter}.\roman*)},ref=\arabic{QuestionSeriesCounter}.\roman*,series=QuestionSeries.\arabic{QuestionSeriesTotal}]}
+%							{\begin{enumerate}[label=\textbf{\arabic{QuestionSeriesCounter}.\arabic*)},ref=\arabic{QuestionSeriesCounter}.\arabic*,series=QuestionSeries.\arabic{QuestionSeriesTotal}]}
+%						}
+%					}
+%				}
+%			}
+%			{
+%				\begin{enumerate}[resume*=QuestionSeries.\arabic{QuestionSeriesTotal}]
+%			}
+%	}
+%	{
+%		\end{enumerate}
+%	}
+
+%\newcommand{\q}[2][2]
+%	{
+%		\item #2
+%		\ifthenelse{\equal{\enumifmt}{A}}
+%			{\begin{esolution}{#1}{\arabic{QuestionSeriesCounter}.\Alph{enumi}}{\session}\end{esolution}}
+%			{\ifthenelse{\equal{\enumifmt}{a}}
+%				{\begin{esolution}{#1}{\arabic{QuestionSeriesCounter}.\alph{enumi}}{\session}\end{esolution}}
+%				{\ifthenelse{\equal{\enumifmt}{I}}
+%					{\begin{esolution}{#1}{\arabic{QuestionSeriesCounter}.\Roman{enumi}}{\session}\end{esolution}}
+%					{\ifthenelse{\equal{\enumifmt}{i}}
+%						{\begin{esolution}{#1}{\arabic{QuestionSeriesCounter}.\roman{enumi}}{\session}\end{esolution}}
+%						{\begin{esolution}{#1}{\arabic{QuestionSeriesCounter}.\arabic{enumi}}{\session}\end{esolution}}
+%					}
+%				}
+%			}
+%	}
+
+\newenvironment{questions}
+{\begin{description}}
+{\end{description}}
+
+\newcommand{\q}[3][2]{
+	\item[\textbf{Question #2})]\hfill \\
+	#3 \hfill
+	\begin{esolution}{#1}{#2}{\session}\end{esolution}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% verbatim solution environment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcounter{linescounter}
+\newenvironment{esolution}[3]
+	{
+		\ifthenelse{\boolean{Solutions}}{
+				\color{blue}
+				\\\includeanswer{#2}{#3}
+			}
+			{
+				\setlength{\extrarowheight}{0.75cm}\\
+				\forloop{linescounter}{0}{\value{linescounter}<#1}{\quad\newline\vspace{10pt} \dotfill\newline}
+			}
+	}
+	{
+	}
+
+
+\DefineVerbatimEnvironment{Verbatim}{Verbatim}
+{formatcom=\color{blue},fontfamily=courier,fontseries=b,frame=lines,numbers=left,fonsize=small}
+
+\lstset{ %
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=2,                   % the step between two line-numbers. If it's 1, each line 
+                                % will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,                   % adds a frame around the code
+tabsize=2,                      % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                % also try caption instead of title
+escapeinside={\%*}{*)},         % if you want to add a comment within your code
+morekeywords={*,...}            % if you want to add more keywords to the set
+}
+
+\makeatletter
+\def\@xobeysp{ }
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% shortcuts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\wifi}{IEEE 802.11\xspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% fonts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\rmdefault}{phv}
+\renewcommand{\sfdefault}{phv}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{shade}{HTML}{3877A9}	%light blue shade
+\setlength{\parskip}{10pt plus 1pt minus 1pt}
