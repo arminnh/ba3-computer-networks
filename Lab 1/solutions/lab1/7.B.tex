@@ -1,0 +1,19 @@
+Issue a ping to the non-existing IP address 111.111.111.111:
+    connect: Network is unreachable
+
+Issue a ping to the broadcast address 10.0.1.255 using the command:
+    14:58:25.587269 IP 10.0.1.11 > 10.0.1.255: ICMP echo request, id 9803, seq 1, length 64
+    14:58:26.588257 IP 10.0.1.11 > 10.0.1.255: ICMP echo request, id 9803, seq 2, length 64
+    
+    There was no reply to the requests because every host on the network had the net.ipv4.icmp_echo_ignore_broadcasts option enabled.
+
+After disabling this with sysctl net.ipv4.icmp_echo_ignore_broadcasts=0, we get the following output:	  
+	14:59:27.536259 IP 10.0.1.11 > 10.0.1.255: ICMP echo request, id 9805, seq 1, length 64
+	14:59:27.536820 IP 10.0.1.14 > 10.0.1.11: ICMP echo reply, id 9805, seq 1, length 64
+	14:59:27.536850 IP 10.0.1.13 > 10.0.1.11: ICMP echo reply, id 9805, seq 1, length 64
+	14:59:27.536860 IP 10.0.1.12 > 10.0.1.11: ICMP echo reply, id 9805, seq 1, length 64
+	14:59:28.535238 IP 10.0.1.11 > 10.0.1.255: ICMP echo request, id 9805, seq 2, length 64
+	14:59:28.535809 IP 10.0.1.14 > 10.0.1.11: ICMP echo reply, id 9805, seq 2, length 64
+	14:59:28.535822 IP 10.0.1.13 > 10.0.1.11: ICMP echo reply, id 9805, seq 2, length 64
+	14:59:28.535825 IP 10.0.1.12 > 10.0.1.11: ICMP echo reply, id 9805, seq 2, length 64
+The three other hosts have responded.
