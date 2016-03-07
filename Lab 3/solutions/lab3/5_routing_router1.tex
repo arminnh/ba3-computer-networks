@@ -1,0 +1,26 @@
+Router1#show ip route
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     10.0.0.0/24 is subnetted, 3 subnets
+C       10.0.2.0 is directly connected, Vlan1
+S       10.0.3.0 [1/0] via 10.0.2.2
+C       10.0.1.0 is directly connected, FastEthernet0/0
+
+Router1#show ip cache
+IP routing cache 0 entries, 0 bytes
+   0 adds, 0 invalidates, 0 refcounts
+Minimum invalidation interval 2 seconds, maximum interval 5 seconds,
+   quiet interval 3 seconds, threshold 0 requests
+Invalidation rate 0 in last second, 0 in last 3 seconds
+Last full cache invalidation occurred 00:06:48 ago
+
+Prefix/Length           Age       Interface       Next Hop
+

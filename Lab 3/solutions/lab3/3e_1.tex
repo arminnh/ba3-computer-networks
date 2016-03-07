@@ -1,0 +1,17 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000000    10.0.1.11             10.0.10.110           ICMP     98     Echo (ping) request  id=0x0cbc, seq=1/256, ttl=64
+      2 0.001736000    68:05:ca:1a:7c:77     ff:ff:ff:ff:ff:ff     ARP      60     Who has 10.0.1.11?  Tell 10.0.1.21
+      3 0.001760000    68:05:ca:1a:7c:70     68:05:ca:1a:7c:77     ARP      42     10.0.1.11 is at 68:05:ca:1a:7c:70
+      4 0.002264000    10.0.2.1              10.0.1.11             ICMP     70     Destination unreachable (Host unreachable)
+      5 1.001440000    10.0.1.11             10.0.10.110           ICMP     98     Echo (ping) request  id=0x0cbc, seq=2/512, ttl=64
+      6 1.003132000    10.0.2.1              10.0.1.11             ICMP     70     Destination unreachable (Host unreachable)
+      7 2.003310000    10.0.1.11             10.0.10.110           ICMP     98     Echo (ping) request  id=0x0cbc, seq=3/768, ttl=64
+      8 2.005025000    10.0.2.1              10.0.1.11             ICMP     70     Destination unreachable (Host unreachable)
+      9 3.005216000    10.0.1.11             10.0.10.110           ICMP     98     Echo (ping) request  id=0x0cbc, seq=4/1024, ttl=64
+     10 3.006920000    10.0.2.1              10.0.1.11             ICMP     70     Destination unreachable (Host unreachable)
+     11 4.007100000    10.0.1.11             10.0.10.110           ICMP     98     Echo (ping) request  id=0x0cbc, seq=5/1280, ttl=64
+     12 4.008788000    10.0.2.1              10.0.1.11             ICMP     70     Destination unreachable (Host unreachable)
+     13 6.002800000    68:05:ca:1a:7c:70     68:05:ca:1a:7c:77     ARP      42     Who has 10.0.1.21?  Tell 10.0.1.11
+     14 6.003358000    68:05:ca:1a:7c:77     68:05:ca:1a:7c:70     ARP      60     10.0.1.21 is at 68:05:ca:1a:7c:77
+
+We see ICMP and ARP packets.

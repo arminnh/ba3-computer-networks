@@ -1,0 +1,6 @@
+PC2 sends ping requests for PC3 to Router1 instead of Router2. Router1 notices the routing table entry for the subnet 10.0.3.0 to Router2 via interface vlan1. This is the same interface where the ping request arrived in, so Router1 responds with an ICMP redirect message to PC1 and forwards the ping request to Router2.
+We can confirm this by looking at messages with no. 8, 9, 10 and 11 in 5.pcap. 
+	Message 8 is sent by PC2 and goes to Router1. 
+	Message 9 is the redirect message from Router1 to PC2.
+	Message 10 is the forwarded ping request by Router1 to Router2.
+	Message 11 is the ping reply from Router2 to PC2.

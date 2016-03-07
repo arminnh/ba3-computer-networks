@@ -1,0 +1,5 @@
+*** icmp en arp van pc4 ****
+
+PC4 sends an ARP request to the router. 
+If Proxy ARP is enabled in the router, the router will forward the ARP request to the pc's on the other subnet, and the router will respond to PC4 with its own MAC address. Then, the pings from PC4 will also be forwarded to the other subnet, if the destination host exists.
+If Proxy ARP is not enabled in the router, no packets will be forwarded to the other subnet and the result of pings will be "Destination host unreachable".

@@ -1,0 +1,14 @@
+student@lab2pc1:~$ arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.0.2.138               ether   00:0e:83:f5:ff:4c   C                     eth0
+10.0.2.10                ether   68:05:ca:1a:7c:77   C                     eth0
+
+student@lab2pc1:~$ route
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         10.0.2.138      0.0.0.0         UG    0      0        0 eth0
+10.0.2.136      *               255.255.255.248 U     0      0        0 eth0
+
+student@lab2pc1:~$ route -C
+Kernel IP routing cache
+Source          Destination     Gateway         Flags Metric Ref    Use Iface
