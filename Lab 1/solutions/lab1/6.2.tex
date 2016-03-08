@@ -1,3 +1,4 @@
+\begin{lstlisting}
 student@lab2pc1:/$ ping -c 5 10.0.1.11
 PING 10.0.1.11 (10.0.1.11) 56(84) bytes of data.
 64 bytes from 10.0.1.11: icmp_seq=1 ttl=64 time=0.032 ms
@@ -9,15 +10,13 @@ PING 10.0.1.11 (10.0.1.11) 56(84) bytes of data.
 --- 10.0.1.11 ping statistics ---
 5 packets transmitted, 5 received, 0% packet loss, time 3996ms
 rtt min/avg/max/mdev = 0.017/0.028/0.036/0.006 ms
+\end{lstlisting}
 
-We expected the pings to 10.0.1.11 to go through the network (eth0), unlike the pings to 
-127.0.0.1, but we noticed they both went through the loopback interface. 
-We found this on the web:
+We expected the pings to 10.0.1.11 to go through the network (eth0), unlike the pings to 127.0.0.1, but we noticed they both went through the loopback interface.\\ 
+We found this on the web:\\
     The loopback interface does not represent any actual hardware, 
     but exists so applications running on your computer can always connect 
-    to servers on the same machine.
+    to servers on the same machine.\\
 
-http://askubuntu.com/questions/247625/what-is-the-loopback-device-and-how-do-i-use-it
-
-The local Ethernet interface is used for packets that are meant for other hosts.
+The local Ethernet interface is used for packets that are meant for other hosts.\\
 The loopback interface is used by a computer to communicate to itself.
