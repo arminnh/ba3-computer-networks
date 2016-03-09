@@ -1,5 +1,5 @@
 Before:
-
+\begin{lstlisting}
 Router1#show ip route
 Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
@@ -14,10 +14,10 @@ Gateway of last resort is not set
      10.0.0.0/24 is subnetted, 2 subnets
 C       10.0.2.0 is directly connected, FastEthernet0/0
 C       10.0.3.0 is directly connected, Vlan1
-
+\end{lstlisting}
 
 After:
-
+\begin{lstlisting}
 Router1#show ip route
 Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
        D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
@@ -33,6 +33,6 @@ Gateway of last resort is not set
 C       10.0.2.0 is directly connected, FastEthernet0/0
 C       10.0.3.0 is directly connected, Vlan1
 S       10.0.1.0 [1/0] via 10.0.2.22
-
+\end{lstlisting}
 
 How the routing table changes: An entry was added for subnet 10.0.1.0/24, for packets to be forwarded to 10.0.2.22 (PC2 eth1)
