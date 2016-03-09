@@ -1,3 +1,1 @@
-The request is broadcasted through its own protocol (ARP) to all available ethernet receivers.
-IP is not usable as protocol as we are searching for the IP - MAC .
-On receival of the request, the computer with 10.0.1.12 responds to the src mac address of the request with its own MAC address.
+An ARP request message is broadcasted, asking for the MAC address of a node with a certain IP address X. The node which has IP address X will then respond with an ARP reply message, which contains its MAC address.

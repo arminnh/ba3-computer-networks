@@ -35,7 +35,7 @@ lo        Link encap:Local Loopback
           collisions:0 txqueuelen:0 
           RX bytes:277467 (277.4 KB)  TX bytes:277467 (277.4 KB)
 
-*****************************************************************************
+===============================================================
 
 eth0      Link encap:Ethernet  HWaddr 68:05:ca:36:39:c7  
           inet addr:10.0.1.11  Bcast:10.0.1.255  Mask:255.255.255.0

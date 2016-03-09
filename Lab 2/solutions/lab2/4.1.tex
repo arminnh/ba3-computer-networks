@@ -1,10 +1,29 @@
+netstat -i:
+
+\begin{lstlisting}
 Kernel Interface table
 Iface   MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
 eth0       1500 0     52819      0      0 0         52760      0      0      0 BMRU
 lo        65536 0       956      0      0 0           956      0      0      0 LRU
+\end{lstlisting}
+
+
+
+
+netstat -rn:
+
+\begin{lstlisting}
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
 10.0.1.0        0.0.0.0         255.255.255.0   U         0 0          0 eth0
+\end{lstlisting}
+
+
+
+
+netstat -an:
+
+\begin{lstlisting}
 Active Internet connections (servers and established)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State      
 tcp        0      0 *:ftp                   *:*                     LISTEN     
@@ -44,7 +63,7 @@ unix  2      [ ACC ]     STREAM     LISTENING     14975    /run/user/1000/pulse/
 unix  2      [ ACC ]     SEQPACKET  LISTENING     638      /run/udev/control
 unix  2      [ ACC ]     STREAM     LISTENING     12166    /var/run/avahi-daemon/socket
 unix  2      [ ACC ]     STREAM     LISTENING     16545    @/com/ubuntu/upstart-session/1000/2155
-unix  2      [ ]         DGRAM                    10862    @%%Ùi
+unix  2      [ ]         DGRAM                    10862    @%%Ùi
 unix  2      [ ACC ]     STREAM     LISTENING     15416    @/com/ubuntu/upstart-session/1000/1934
 unix  2      [ ACC ]     STREAM     LISTENING     12830    @/tmp/dbus-OAyeDpuWXb
 unix  19     [ ]         DGRAM                    10203    /dev/log
@@ -379,6 +398,12 @@ unix  2      [ ]         DGRAM                    873
 unix  3      [ ]         STREAM     CONNECTED     19257    @/tmp/dbus-OAyeDpuWXb
 unix  3      [ ]         STREAM     CONNECTED     19181    @/tmp/dbus-OAyeDpuWXb
 unix  3      [ ]         STREAM     CONNECTED     13105    
+\end{lstlisting}
+
+
+netstat -s:
+
+\begin{lstlisting}
 Ip:
     53549 total packets received
     2 with invalid addresses
@@ -448,3 +473,5 @@ IpExt:
     OutMcastOctets: 26326
     InBcastOctets: 5108
     InNoECTPkts: 53549
+\end{lstlisting}
+
