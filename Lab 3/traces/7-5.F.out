@@ -1,4 +1,3 @@
-\begin{lstlisting}
 student@lab2pc1:~$ ping -c3 10.0.2.10
 PING 10.0.2.10 (10.0.2.10) 56(84) bytes of data.
 From 10.0.2.138: icmp_seq=1 Redirect Host(New nexthop: 10.0.2.138)
@@ -9,4 +8,3 @@ From 10.0.2.138: icmp_seq=1 Redirect Host(New nexthop: 10.0.2.138)
 --- 10.0.2.10 ping statistics ---
 3 packets transmitted, 3 received, 0% packet loss, time 2000ms
 rtt min/avg/max/mdev = 0.448/1.669/4.048/1.682 ms
-\end{lstlisting}
