@@ -3,4 +3,14 @@
 13:55:42.316043 IP 10.0.1.12 > 10.0.1.11: ICMP echo reply, id 9383, seq 1, length 64
 
 \end{lstlisting}
-Fields: time network\_layer\_protocol source\_address $>$ destination\_address: ICMP control\_message, id, seq, length
+Fields:\\
+\begin{itemize}
+\item \textit{time}: states the time the message was sent\\
+\item \textit{network\_layer\_protocol}: the protocol over which the message was sent \\
+\item \textit{source\_address}: the address of the sender\\
+\item \textit{destination\_address}: the address of the receiver\\
+\item \textit{ICMP control\_message}: the type of message: ICMP echo request/ ICMP echo reply for ping \\
+\item \textit{id}: identifier used to match pings in a session \\
+\item \textit{seq}: sequence number, used to match the requests with their reply \\
+\item \textit{length}: length of the message in bytes
+\end{itemize}
