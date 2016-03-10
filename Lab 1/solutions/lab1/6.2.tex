@@ -13,10 +13,10 @@ rtt min/avg/max/mdev = 0.017/0.028/0.036/0.006 ms
 \end{lstlisting}
 
 We expected the pings to 10.0.1.11 to go through the network (eth0), unlike the pings to 127.0.0.1, but we noticed they both went through the loopback interface.\\ 
-We found this on the web:\\
-    The loopback interface does not represent any actual hardware, 
-    but exists so applications running on your computer can always connect 
-    to servers on the same machine.\\
-
+We found this on the web:\begin{verbatim}
+"The loopback interface does not represent any actual hardware, but exists
+so applications running on your computer can always connect to servers on
+the same machine."
+\end{verbatim}
 The local Ethernet interface is used for packets that are meant for other hosts.\\
 The loopback interface is used by a computer to communicate to itself.
