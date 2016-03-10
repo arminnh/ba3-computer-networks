@@ -1,3 +1,5 @@
+1:
+
 14:04:30.268037 ARP, Request who-has 10.0.1.12 tell 10.0.1.11, length 28
 14:04:30.268636 ARP, Reply 10.0.1.12 is-at 68:05:ca:36:31:f0, length 46
 14:04:30.268651 IP 10.0.1.11 > 10.0.1.12: ICMP echo request, id 2252, seq 1, length 64
@@ -15,6 +17,10 @@
 14 packets captured
 14 packets received by filter
 0 packets dropped by kernel
+
+
+
+3:
 
 14:06:38.484145 IP 10.0.1.11 > 10.0.1.12: ICMP echo request, id 2265, seq 1, length 64
 14:06:38.484711 IP 10.0.1.12 > 10.0.1.11: ICMP echo reply, id 2265, seq 1, length 64

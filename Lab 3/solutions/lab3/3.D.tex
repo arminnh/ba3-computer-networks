@@ -16,4 +16,4 @@ We see ARP messages asking for 10.0.1.81, followed by messages asking for 10.0.1
 Longer network prefixes are always preferred. \\
 That's why, for a message sent to 10.0.3.9, PC1 will match the table entry 10.0.3.9/32, thus explaining the ARP message asking for 10.0.1.81.\\
 10.0.3.14 doesn't match any table entries of network prefix length 32, but it does match 10.0.3.0/24, thus explaining the ARP message asking for 10.0.1.61.\\
-10.0.4.1 doesn't match any table entries of network prefix length 24, but it does match 10.0.0.0/16, thus explaining the ARP message asking for 10.0.1.71\\
+10.0.4.1 doesn't match any table entries of network prefix length 24, but it does match 10.0.0.0/16, thus explaining the ARP message asking for 10.0.1.71.\\

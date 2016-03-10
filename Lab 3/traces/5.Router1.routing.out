@@ -14,6 +14,7 @@ C       10.0.2.0 is directly connected, Vlan1
 S       10.0.3.0 [1/0] via 10.0.2.2
 C       10.0.1.0 is directly connected, FastEthernet0/0
 
+
 Router1#show ip cache
 IP routing cache 0 entries, 0 bytes
    0 adds, 0 invalidates, 0 refcounts
