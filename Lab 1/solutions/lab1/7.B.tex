@@ -1,14 +1,14 @@
 Issue a ping to the non-existing IP address 111.111.111.111:\\
    \begin{lstlisting}  
-    connect: Network is unreachable\\
+    connect: Network is unreachable
 \end{lstlisting}  
 Issue a ping to the broadcast address 10.0.1.255 using the command:
 \begin{lstlisting}  
     14:58:25.587269 IP 10.0.1.11 > 10.0.1.255: ICMP echo request, id 9803, seq 1, length 64
     14:58:26.588257 IP 10.0.1.11 > 10.0.1.255: ICMP echo request, id 9803, seq 2, length 64
 \end{lstlisting}  
-    There was no reply to the requests because every host on the network had the net.ipv4.icmp\_echo\_ignore\_broadcasts option enabled.\\
-After disabling this with sysctl net.ipv4.icmp\_echo\_ignore\_broadcasts=0, we get the following output:
+    There was no reply to the requests because every host on the network had \\the \textit{net.ipv4.icmp\_echo\_ignore\_broadcasts} option enabled.\\
+After disabling this with \textit{sysctl net.ipv4.icmp\_echo\_ignore\_broadcasts=0},\\ we get the following output:
 \begin{lstlisting}	  
 	14:59:27.536259 IP 10.0.1.11 > 10.0.1.255: ICMP echo request, id 9805, seq 1, length 64
 	14:59:27.536820 IP 10.0.1.14 > 10.0.1.11: ICMP echo reply, id 9805, seq 1, length 64
@@ -20,4 +20,4 @@ After disabling this with sysctl net.ipv4.icmp\_echo\_ignore\_broadcasts=0, we g
 	14:59:28.535825 IP 10.0.1.12 > 10.0.1.11: ICMP echo reply, id 9805, seq 2, length 64
 \end{lstlisting}
 
-The three other hosts have responded.
+The three other hosts have now responded.
