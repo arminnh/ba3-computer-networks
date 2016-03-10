@@ -1,4 +1,4 @@
 traceroute sends packets with different time-to-live (TTL) to the destination, starting from TTL=1 and incrementing on each following packet. \\
-The packet with TTL=1 will be decremented to 0 at the first hop it encounters (PC2 in this case), and it will return a "Time-to-live exceeded" ICMP message. \\
-Each packet with initial TTL=n will reach one hop further than a packet with TTL=n-1. traceroute saves the source of every TTL exceeded message and considers it a hop.\\
-A packet which reaches the destination will (hopefully) return a "Destination unreachable" message. This is because traceroute sends packets to "unlikely ports". These are ports which are unlikely to be in use.
+The packet with TTL=1 will be decremented to 0 at the first hop it encounters (PC2 in this case), and it will return a \"Time-to-live exceeded\" ICMP message. \\
+Each packet with initial TTL=n will reach one hop further than a packet with TTL=n-1. traceroute saves the source of every TTL exceeded message and considers it a hop. The hops are ordered based on the time they arrived: the longer it takes for a message to return, the further along the route it is assumed to be.\\
+A packet which reaches the destination will (hopefully) return a \"Destination unreachable\" message. This is because traceroute sends packets to \"unlikely ports\". These are ports which are unlikely to be in use, causing the host to send such an error message upon arrival if the port was indeed not in use.
