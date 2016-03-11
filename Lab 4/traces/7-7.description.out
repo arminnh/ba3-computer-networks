@@ -1,0 +1,82 @@
+No.     Time        Source                Destination           Protocol Length Info
+     22 60.015195   10.0.1.2              10.0.1.1              OSPF     66     DB Description
+
+Frame 22: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Mar 11, 2016 15:56:23.457699000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1457708183.457699000 seconds
+    [Time delta from previous captured frame: 0.000927000 seconds]
+    [Time delta from previous displayed frame: 0.000927000 seconds]
+    [Time since reference or first frame: 60.015195000 seconds]
+    Frame Number: 22
+    Frame Length: 66 bytes (528 bits)
+    Capture Length: 66 bytes (528 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:ospf]
+    [Coloring Rule Name: OSPF State Change]
+    [Coloring Rule String: ospf.msg != 1]
+Ethernet II, Src: 68:05:ca:36:31:f0 (68:05:ca:36:31:f0), Dst: 68:05:ca:36:33:a0 (68:05:ca:36:33:a0)
+    Destination: 68:05:ca:36:33:a0 (68:05:ca:36:33:a0)
+        Address: 68:05:ca:36:33:a0 (68:05:ca:36:33:a0)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: 68:05:ca:36:31:f0 (68:05:ca:36:31:f0)
+        Address: 68:05:ca:36:31:f0 (68:05:ca:36:31:f0)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IP (0x0800)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 10.0.1.1 (10.0.1.1)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0xc0 (DSCP 0x30: Class Selector 6; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+        1100 00.. = Differentiated Services Codepoint: Class Selector 6 (0x30)
+        .... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)
+    Total Length: 52
+    Identification: 0xdc60 (56416)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 1
+        [Expert Info (Note/Sequence): "Time To Live" only 1]
+            [Message: "Time To Live" only 1]
+            [Severity level: Note]
+            [Group: Sequence]
+    Protocol: OSPF IGP (89)
+    Header checksum: 0xc64e [validation disabled]
+        [Good: False]
+        [Bad: False]
+    Source: 10.0.1.2 (10.0.1.2)
+    Destination: 10.0.1.1 (10.0.1.1)
+    [Source GeoIP: Unknown]
+    [Destination GeoIP: Unknown]
+Open Shortest Path First
+    OSPF Header
+        OSPF Version: 2
+        Message Type: DB Description (2)
+        Packet Length: 32
+        Source OSPF Router: 10.0.1.2 (10.0.1.2)
+        Area ID: 0.0.0.0 (Backbone)
+        Packet Checksum: 0x9493 [correct]
+        Auth Type: Null
+        Auth Data (none)
+    OSPF DB Description
+        Interface MTU: 1500
+        Options: 0x02 (E)
+            0... .... = DN: DN-bit is NOT set
+            .0.. .... = O: O-bit is NOT set
+            ..0. .... = DC: Demand Circuits are NOT supported
+            ...0 .... = L: The packet does NOT contain LLS data block
+            .... 0... = NP: NSSA is NOT supported
+            .... .0.. = MC: NOT Multicast Capable
+            .... ..1. = E: External Routing Capability
+            .... ...0 = MT: NO Multi-Topology Routing
+        DB Description: 0x07 (I, M, MS)
+            .... 0... = R: OOBResync bit is NOT set
+            .... .1.. = I: Init bit is SET
+            .... ..1. = M: More bit is SET
+            .... ...1 = MS: Master/Slave bit is SET
+        DD Sequence: 1457717122

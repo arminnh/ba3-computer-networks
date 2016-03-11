@@ -1,0 +1,8 @@
+Router1#show ip ospf border-routers
+
+OSPF Process 1 internal Routing Table
+
+Codes: i - Intra-area route, I - Inter-area route
+
+i 10.0.1.1 [1] via 10.0.2.1, Vlan1, ABR, Area 1, SPF 7
+

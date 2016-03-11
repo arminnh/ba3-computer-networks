@@ -1,0 +1,26 @@
+Router3#show ip ospf database                                                   
+                                                                                
+            OSPF Router with ID (10.0.6.6) (Process ID 1)                       
+                                                                                
+                Router Link States (Area 2)                                     
+                                                                                
+Link ID         ADV Router      Age         Seq#       Checksum Link count      
+10.0.1.2        10.0.1.2        248         0x80000005 0x00D72D 1               
+10.0.6.6        10.0.6.6        281         0x80000006 0x002C6E 2               
+10.0.6.7        10.0.6.7        284         0x8000000A 0x004259 2               
+10.0.7.8        10.0.7.8        280         0x80000005 0x00622D 2               
+                                                                                
+                Net Link States (Area 2)                                        
+                                                                                
+Link ID         ADV Router      Age         Seq#       Checksum                 
+10.0.5.6        10.0.6.6        247         0x80000002 0x00F5D7                 
+10.0.6.7        10.0.6.7        290         0x80000002 0x009D60                 
+10.0.7.7        10.0.6.7        284         0x80000002 0x00B742                 
+                                                                                
+                Summary Net Link States (Area 2)                                
+                                                                                
+Link ID         ADV Router      Age         Seq#       Checksum                 
+10.0.1.0        10.0.1.2        249         0x80000001 0x00D466                 
+10.0.2.0        10.0.1.2        249         0x80000001 0x002E02                 
+10.0.3.0        10.0.1.2        249         0x80000001 0x002D01                 
+10.0.4.0        10.0.1.2        249         0x80000001 0x00220B    

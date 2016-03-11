@@ -1,0 +1,78 @@
+No.     Time        Source                Destination           Protocol Length Info
+     73 22.220337   10.0.1.1              224.0.0.5             OSPF     82     Hello Packet
+
+Frame 73: 82 bytes on wire (656 bits), 82 bytes captured (656 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Mar 11, 2016 14:45:01.843854000 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1457703901.843854000 seconds
+    [Time delta from previous captured frame: 0.435913000 seconds]
+    [Time delta from previous displayed frame: 2.219404000 seconds]
+    [Time since reference or first frame: 22.220337000 seconds]
+    Frame Number: 73
+    Frame Length: 82 bytes (656 bits)
+    Capture Length: 82 bytes (656 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:ospf]
+    [Coloring Rule Name: Routing]
+    [Coloring Rule String: hsrp || eigrp || ospf || bgp || cdp || vrrp || gvrp || igmp || ismp]
+Ethernet II, Src: IntelCor_36:33:a0 (68:05:ca:36:33:a0), Dst: IPv4mcast_00:00:05 (01:00:5e:00:00:05)
+    Destination: IPv4mcast_00:00:05 (01:00:5e:00:00:05)
+        Address: IPv4mcast_00:00:05 (01:00:5e:00:00:05)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...1 .... .... .... .... = IG bit: Group address (multicast/broadcast)
+    Source: IntelCor_36:33:a0 (68:05:ca:36:33:a0)
+        Address: IntelCor_36:33:a0 (68:05:ca:36:33:a0)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IP (0x0800)
+Internet Protocol Version 4, Src: 10.0.1.1 (10.0.1.1), Dst: 224.0.0.5 (224.0.0.5)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0xc0 (DSCP 0x30: Class Selector 6; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+        1100 00.. = Differentiated Services Codepoint: Class Selector 6 (0x30)
+        .... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)
+    Total Length: 68
+    Identification: 0xca02 (51714)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 1
+    Protocol: OSPF IGP (89)
+    Header checksum: 0x0399 [validation disabled]
+        [Good: False]
+        [Bad: False]
+    Source: 10.0.1.1 (10.0.1.1)
+    Destination: 224.0.0.5 (224.0.0.5)
+    [Source GeoIP: Unknown]
+    [Destination GeoIP: Unknown]
+Open Shortest Path First
+    OSPF Header
+        OSPF Version: 2
+        Message Type: Hello Packet (1)
+        Packet Length: 48
+        Source OSPF Router: 10.0.1.1 (10.0.1.1)
+        Area ID: 0.0.0.1
+        Packet Checksum: 0xd093 [correct]
+        Auth Type: Null
+        Auth Data (none)
+    OSPF Hello Packet
+        Network Mask: 255.255.255.0
+        Hello Interval: 10 seconds
+        Options: 0x02 (E)
+            0... .... = DN: DN-bit is NOT set
+            .0.. .... = O: O-bit is NOT set
+            ..0. .... = DC: Demand Circuits are NOT supported
+            ...0 .... = L: The packet does NOT contain LLS data block
+            .... 0... = NP: NSSA is NOT supported
+            .... .0.. = MC: NOT Multicast Capable
+            .... ..1. = E: External Routing Capability
+            .... ...0 = MT: NO Multi-Topology Routing
+        Router Priority: 1
+        Router Dead Interval: 40 seconds
+        Designated Router: 10.0.1.2
+        Backup Designated Router: 10.0.1.1
+        Active Neighbor: 10.0.1.2

@@ -1,0 +1,3 @@
+--- 10.0.7.7 ping statistics ---
+19 packets transmitted, 12 received, +6 errors, 36% packet loss, time 18035ms
+rtt min/avg/max/mdev = 2.554/2.646/2.741/0.078 ms
