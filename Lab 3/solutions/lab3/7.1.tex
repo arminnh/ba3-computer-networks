@@ -1,3 +1,8 @@
-*******************************************************
-Antwoord
-*******************************************************
+Step 3:
+Since the router is used as the default gateway for PC1, every ping is sent to the router. The ping to PC2 is delivered to PC2 without a problem and the subnets match up, so nothing is out of the ordinary. The ping to PC3 succeeds too because interface vlan1 of the router (10.0.2.138/24) is \"coincidentally\" within what PC3 considers its subnet (which contains all IP addresses in the range 10.0.2.137-142). For the ping to PC4, the situation is the same as with the ping to PC1.
+
+Step 4:
+As before, because PC4's IP address is within what PC3 considers its subnet, the ping succeeds again.
+
+Step 5:
+The ping from PC3 to PC2 succeeds because the ping request is sent to the default gateway (the router), and the router then forwards the request successfully because PC2 is in its subnet, as is PC3, so the replies are also sent back successfully.
