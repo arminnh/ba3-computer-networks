@@ -1,0 +1,7 @@
+No.     Time           Source                Destination           Protocol Length Info
+     16 17.923541      10.0.4.10             10.0.1.10             ICMP     98     Echo (ping) request  id=0x0d01, seq=1/256, ttl=52 (no response found!)
+
+Frame 16: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: CiscoInc_17:00:6e (00:0d:65:17:00:6e), Dst: CiscoInc_ef:b9:41 (00:0d:bc:ef:b9:41)
+Internet Protocol Version 4, Src: 10.0.4.10, Dst: 10.0.1.10
+Internet Control Message Protocol

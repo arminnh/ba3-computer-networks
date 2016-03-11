@@ -32,7 +32,15 @@ Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
 10.0.3.0        0.0.0.0         255.255.255.0   U         0 0          0 eth0
 \end{lstlisting}
 
-
-****************************************************** \\
-Explain the entries in the routing table and discuss the values of the fields for each entry. \\
-******************************************************
+The Destination field specifies the address to which outgoing packets will be matched in order to select the right gateway. \\
+The gateway field specifies the gateway address a packet should be sent to if a match was made. \\
+The Genmask field specifies which bits of the Destination field must match the IP address of the outgoing packet; every bit (in the binary representation of the numbers) that is 1 in the Genmask must match, every bit that equals 0 must not. In this case the first 24 bits of the destination IP address of an outgoing packet must be equal to the address in the Destination field in order to match. \\
+For example, any outgoing packet on PC2 with a destination IP address in the range 10.0.3.0-255 would match the fifth entry of PC2's routing table, thus sending the packet to gateway 10.0.2.1. \\
+For the flags, U means that the route is \"up\"; G means \"use gateway\". The G flag signifies whether the destination is directly connected. If it is, the G flag won't be present. Other flags not seen here exist, such as H (target is a host), or C (cache entry). \\
+MSS is the default maximum segment size for TCP connections over the route. Since the value of this field is always 0, we assume that there is no limit on the segment size, although it might also be that no TCP whatsoever is allowed. \\
+Window specifies the default window size for TCP connections over the route. Again, every value is 0 in this case. We assume a default value will be selected from somewhere else. \\
+irtt is the initial roundtrip time. This field is used to guess about the best TCP parameters initially, before any TCP packets have been sent over the network. Once again, this value is not configured to anything useful here. \\
+Metric is a measure of the distance to the target, usually represented by the number of hops. \\
+Ref is the number of references to this route. \\
+Use is the count of lookups to this route. \\
+Iface specifies the interface the outgoing datagram will have to be sent out of in order to reach the gateway.

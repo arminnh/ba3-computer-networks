@@ -35,4 +35,6 @@ C       10.0.3.0 is directly connected, Vlan1
 S       10.0.1.0 [1/0] via 10.0.2.22
 \end{lstlisting}
 
+The first column displays the flags that apply to each entry. The flags are explained above. For the entries in our tables, we see C and S. C means that the destination subnet is directly connected to the router. S means that the entry is static. We did indeed add the static entry ourselves.
+
 How the routing table changes: An entry was added for subnet 10.0.1.0/24, for packets to be forwarded to 10.0.2.22 (PC2 eth1)
