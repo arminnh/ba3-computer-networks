@@ -1,0 +1,273 @@
+No.     Time        Source                Destination           Protocol Length Info
+      1 0.000000    10.0.4.10             224.0.0.9             RIPv2    66     Request
+
+Frame 1: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: IntelCor_39:e1:2f (68:05:ca:39:e1:2f), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.4.10 (10.0.4.10), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      2 0.002275    10.0.4.3              10.0.4.10             RIPv2    106    Response
+
+Frame 2: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24), Dst: IntelCor_39:e1:2f (68:05:ca:39:e1:2f)
+Internet Protocol Version 4, Src: 10.0.4.3 (10.0.4.3), Dst: 10.0.4.10 (10.0.4.10)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      3 0.005800    10.0.4.10             224.0.0.22            IGMPv3   54     Membership Report / Join group 224.0.0.9 for any sources
+
+Frame 3: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+Ethernet II, Src: IntelCor_39:e1:2f (68:05:ca:39:e1:2f), Dst: IPv4mcast_00:00:16 (01:00:5e:00:00:16)
+Internet Protocol Version 4, Src: 10.0.4.10 (10.0.4.10), Dst: 224.0.0.22 (224.0.0.22)
+Internet Group Management Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      4 0.021790    10.0.4.10             224.0.0.22            IGMPv3   54     Membership Report / Join group 224.0.0.9 for any sources
+
+Frame 4: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+Ethernet II, Src: IntelCor_39:e1:2f (68:05:ca:39:e1:2f), Dst: IPv4mcast_00:00:16 (01:00:5e:00:00:16)
+Internet Protocol Version 4, Src: 10.0.4.10 (10.0.4.10), Dst: 224.0.0.22 (224.0.0.22)
+Internet Group Management Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      5 0.581401    Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 5: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      6 1.595844    10.0.4.3              224.0.0.9             RIPv2    106    Response
+
+Frame 6: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.4.3 (10.0.4.3), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      7 2.584839    Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 7: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      8 4.588176    Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 8: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+      9 6.591510    Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 9: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     10 8.590839    Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 10: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     11 10.594186   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 11: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     12 12.597513   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 12: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     13 14.596836   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 13: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     14 16.600176   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 14: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     15 18.603507   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 15: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     16 20.606843   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 16: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     17 22.019656   10.0.3.10             10.0.4.10             ICMP     98     Echo (ping) request  id=0x0f31, seq=1/256, ttl=63 (reply in 18)
+
+Frame 17: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24), Dst: IntelCor_39:e1:2f (68:05:ca:39:e1:2f)
+Internet Protocol Version 4, Src: 10.0.3.10 (10.0.3.10), Dst: 10.0.4.10 (10.0.4.10)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     18 22.019696   10.0.4.10             10.0.3.10             ICMP     98     Echo (ping) reply    id=0x0f31, seq=1/256, ttl=64 (request in 17)
+
+Frame 18: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: IntelCor_39:e1:2f (68:05:ca:39:e1:2f), Dst: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24)
+Internet Protocol Version 4, Src: 10.0.4.10 (10.0.4.10), Dst: 10.0.3.10 (10.0.3.10)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     19 22.606119   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 19: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     20 23.020919   10.0.3.10             10.0.4.10             ICMP     98     Echo (ping) request  id=0x0f31, seq=2/512, ttl=63 (reply in 21)
+
+Frame 20: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24), Dst: IntelCor_39:e1:2f (68:05:ca:39:e1:2f)
+Internet Protocol Version 4, Src: 10.0.3.10 (10.0.3.10), Dst: 10.0.4.10 (10.0.4.10)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     21 23.020942   10.0.4.10             10.0.3.10             ICMP     98     Echo (ping) reply    id=0x0f31, seq=2/512, ttl=64 (request in 20)
+
+Frame 21: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: IntelCor_39:e1:2f (68:05:ca:39:e1:2f), Dst: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24)
+Internet Protocol Version 4, Src: 10.0.4.10 (10.0.4.10), Dst: 10.0.3.10 (10.0.3.10)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     22 24.022099   10.0.3.10             10.0.4.10             ICMP     98     Echo (ping) request  id=0x0f31, seq=3/768, ttl=63 (reply in 23)
+
+Frame 22: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24), Dst: IntelCor_39:e1:2f (68:05:ca:39:e1:2f)
+Internet Protocol Version 4, Src: 10.0.3.10 (10.0.3.10), Dst: 10.0.4.10 (10.0.4.10)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     23 24.022122   10.0.4.10             10.0.3.10             ICMP     98     Echo (ping) reply    id=0x0f31, seq=3/768, ttl=64 (request in 22)
+
+Frame 23: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: IntelCor_39:e1:2f (68:05:ca:39:e1:2f), Dst: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24)
+Internet Protocol Version 4, Src: 10.0.4.10 (10.0.4.10), Dst: 10.0.3.10 (10.0.3.10)
+Internet Control Message Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     24 24.609460   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 24: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     25 26.612847   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 25: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     26 27.021802   IntelCor_39:e1:2f     Cisco_ef:eb:24        ARP      42     Who has 10.0.4.3?  Tell 10.0.4.10
+
+Frame 26: 42 bytes on wire (336 bits), 42 bytes captured (336 bits)
+Ethernet II, Src: IntelCor_39:e1:2f (68:05:ca:39:e1:2f), Dst: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24)
+Address Resolution Protocol (request)
+
+No.     Time        Source                Destination           Protocol Length Info
+     27 27.023061   Cisco_ef:eb:24        IntelCor_39:e1:2f     ARP      60     10.0.4.3 is at 00:0d:bc:ef:eb:24
+
+Frame 27: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24), Dst: IntelCor_39:e1:2f (68:05:ca:39:e1:2f)
+Address Resolution Protocol (reply)
+
+No.     Time        Source                Destination           Protocol Length Info
+     28 28.612179   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 28: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     29 30.615509   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 29: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     30 31.541744   10.0.4.3              224.0.0.9             RIPv2    106    Response
+
+Frame 30: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24), Dst: IPv4mcast_00:00:09 (01:00:5e:00:00:09)
+Internet Protocol Version 4, Src: 10.0.4.3 (10.0.4.3), Dst: 224.0.0.9 (224.0.0.9)
+User Datagram Protocol, Src Port: router (520), Dst Port: router (520)
+Routing Information Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     31 32.618877   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 31: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     32 34.622208   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 32: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     33 36.621537   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 33: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
+
+No.     Time        Source                Destination           Protocol Length Info
+     34 38.624880   Cisco_d4:bd:b0        Spanning-tree-(for-bridges)_00 STP      60     Conf. Root = 32768/0/00:12:00:d4:bd:b4  Cost = 0  Port = 0x8001
+
+Frame 34: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Spanning Tree Protocol
