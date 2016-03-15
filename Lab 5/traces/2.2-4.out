@@ -1,0 +1,6 @@
+tftp> student@lab2pc1:~$ sudo tftp 10.0.5.11
+[sudo] password for student: 
+tftp> get large.d
+Received 1056606 bytes in 1.6 seconds
+tftp> quit
+student@lab2pc1:~$ 

@@ -1,0 +1,29 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000000    10.0.5.11             10.0.5.22             TCP      74     56753 > krb524 [SYN] Seq=0 Win=29200 Len=0 MSS=1460 SACK_PERM=1 TSval=2366694 TSecr=0 WS=128
+      2 0.000615000    10.0.5.22             10.0.5.11             TCP      74     krb524 > 56753 [SYN, ACK] Seq=0 Ack=1 Win=28960 Len=0 MSS=1460 SACK_PERM=1 TSval=2365571 TSecr=2366694 WS=128
+      3 0.000649000    10.0.5.11             10.0.5.22             TCP      66     56753 > krb524 [ACK] Seq=1 Ack=1 Win=29312 Len=0 TSval=2366694 TSecr=2365571
+      4 0.000773000    10.0.5.11             10.0.5.22             TCP      145    56753 > krb524 [PSH, ACK] Seq=1 Ack=1 Win=29312 Len=79 TSval=2366694 TSecr=2365571
+      5 0.001296000    10.0.5.22             10.0.5.11             TCP      66     krb524 > 56753 [ACK] Seq=1 Ack=80 Win=29056 Len=0 TSval=2365572 TSecr=2366694
+      6 0.003092000    10.0.5.22             10.0.5.11             TCP      81     krb524 > 56753 [PSH, ACK] Seq=1 Ack=80 Win=29056 Len=15 TSval=2365572 TSecr=2366694
+      7 0.003138000    10.0.5.11             10.0.5.22             TCP      66     56753 > krb524 [ACK] Seq=80 Ack=16 Win=29312 Len=0 TSval=2366695 TSecr=2365572
+      8 0.003176000    10.0.5.11             10.0.5.22             TCP      74     35401 > 5038 [SYN] Seq=0 Win=29200 Len=0 MSS=1460 SACK_PERM=1 TSval=2366695 TSecr=0 WS=128
+      9 0.003740000    10.0.5.22             10.0.5.11             TCP      74     5038 > 35401 [SYN, ACK] Seq=0 Ack=1 Win=28960 Len=0 MSS=1460 SACK_PERM=1 TSval=2365572 TSecr=2366695 WS=128
+     10 0.003769000    10.0.5.11             10.0.5.22             TCP      66     35401 > 5038 [ACK] Seq=1 Ack=1 Win=29312 Len=0 TSval=2366695 TSecr=2365572
+     11 0.003875000    10.0.5.11             10.0.5.22             TCP      1090   35401 > 5038 [PSH, ACK] Seq=1 Ack=1 Win=29312 Len=1024 TSval=2366695 TSecr=2365572
+     12 0.003890000    10.0.5.11             10.0.5.22             TCP      1514   35401 > 5038 [ACK] Seq=1025 Ack=1 Win=29312 Len=1448 TSval=2366695 TSecr=2365572
+     13 0.003899000    10.0.5.11             10.0.5.22             TCP      2962   35401 > 5038 [ACK] Seq=2473 Ack=1 Win=29312 Len=2896 TSval=2366695 TSecr=2365572
+     14 0.003915000    10.0.5.11             10.0.5.22             TCP      4938   35401 > 5038 [FIN, PSH, ACK] Seq=5369 Ack=1 Win=29312 Len=4872 TSval=2366695 TSecr=2365572
+     15 0.006422000    10.0.5.22             10.0.5.11             TCP      66     5038 > 35401 [ACK] Seq=1 Ack=1025 Win=31104 Len=0 TSval=2365573 TSecr=2366695
+     16 0.006673000    10.0.5.22             10.0.5.11             TCP      66     5038 > 35401 [ACK] Seq=1 Ack=2473 Win=33920 Len=0 TSval=2365573 TSecr=2366695
+     17 0.013435000    10.0.5.22             10.0.5.11             TCP      66     5038 > 35401 [ACK] Seq=1 Ack=3921 Win=36864 Len=0 TSval=2365573 TSecr=2366695
+     18 0.013685000    10.0.5.22             10.0.5.11             TCP      66     5038 > 35401 [ACK] Seq=1 Ack=5369 Win=39808 Len=0 TSval=2365574 TSecr=2366695
+     19 0.013700000    10.0.5.22             10.0.5.11             TCP      66     5038 > 35401 [ACK] Seq=1 Ack=6817 Win=42624 Len=0 TSval=2365574 TSecr=2366695
+     20 0.013703000    10.0.5.22             10.0.5.11             TCP      66     5038 > 35401 [ACK] Seq=1 Ack=8265 Win=45568 Len=0 TSval=2365574 TSecr=2366695
+     21 0.013706000    10.0.5.22             10.0.5.11             TCP      66     5038 > 35401 [ACK] Seq=1 Ack=9713 Win=48384 Len=0 TSval=2365575 TSecr=2366695
+     22 0.013912000    10.0.5.22             10.0.5.11             TCP      145    krb524 > 56753 [PSH, ACK] Seq=16 Ack=80 Win=29056 Len=79 TSval=2365575 TSecr=2366695
+     23 0.013932000    10.0.5.11             10.0.5.22             TCP      66     56753 > krb524 [ACK] Seq=80 Ack=95 Win=29312 Len=0 TSval=2366697 TSecr=2365575
+     24 0.013941000    10.0.5.22             10.0.5.11             TCP      66     krb524 > 56753 [FIN, ACK] Seq=95 Ack=80 Win=29056 Len=0 TSval=2365575 TSecr=2366695
+     25 0.013997000    10.0.5.11             10.0.5.22             TCP      66     56753 > krb524 [FIN, ACK] Seq=80 Ack=96 Win=29312 Len=0 TSval=2366698 TSecr=2365575
+     26 0.014190000    10.0.5.22             10.0.5.11             TCP      66     5038 > 35401 [FIN, ACK] Seq=1 Ack=10242 Win=51328 Len=0 TSval=2365575 TSecr=2366695
+     27 0.014205000    10.0.5.11             10.0.5.22             TCP      66     35401 > 5038 [ACK] Seq=10242 Ack=2 Win=29312 Len=0 TSval=2366698 TSecr=2365575
+     28 0.014454000    10.0.5.22             10.0.5.11             TCP      66     krb524 > 56753 [ACK] Seq=96 Ack=81 Win=29056 Len=0 TSval=2365575 TSecr=2366698
