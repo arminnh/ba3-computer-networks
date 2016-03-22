@@ -1,0 +1,38 @@
+From frame 4 in /Lab\ 4/traces/2-8.PC2.out: \\
+
+\begin{lstlisting}
+Routing Information Protocol
+    Command: Response (2)
+    Version: RIPv2 (2)
+    IP Address: 10.0.3.0, Metric: 1
+        Address Family: IP (2)
+        Route Tag: 0
+        IP Address: 10.0.3.0 (10.0.3.0)
+        Netmask: 255.255.255.0 (255.255.255.0)
+        Next Hop: 0.0.0.0 (0.0.0.0)
+        Metric: 1
+    IP Address: 10.0.4.0, Metric: 2
+        Address Family: IP (2)
+        Route Tag: 0
+        IP Address: 10.0.4.0 (10.0.4.0)
+        Netmask: 255.255.255.0 (255.255.255.0)
+        Next Hop: 0.0.0.0 (0.0.0.0)
+        Metric: 2
+\end{lstlisting}
+We notice here that in this packet there is information for two entries in the routing table.
+
+Explanations:
+\begin{lstlisting}
+Routing Information Protocol
+    Command: RIP command (request or response)
+    Version: RIP version
+    IP Address: IP address of a host to update the routing table, Metric: amount of internetwork hops to go through to get to the destination
+        Address Family: the used address family. RIP can carry routing information for several different protocols (IP in this case).
+        Route Tag: used to distinguish between internal and external routes
+        IP Address: the IP address for the table entry
+        Netmask: subnet mask for the table entry
+        Next Hop: IP address of the next hop to which packets for the entry should be forwarded
+        Metric: amount of internetwork hops to go through to get to the destination
+\end{lstlisting}
+
+
