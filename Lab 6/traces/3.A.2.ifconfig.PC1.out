@@ -1,0 +1,35 @@
+student@lab2pc1:~/solutions$ ifconfig -a
+eth0      Link encap:Ethernet  HWaddr 68:05:ca:36:33:a0  
+          inet addr:10.0.1.11  Bcast:10.0.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::6a05:caff:fe36:33a0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:76 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:90 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:11782 (11.7 KB)  TX bytes:14581 (14.5 KB)
+          Interrupt:19 Memory:f06c0000-f06e0000 
+
+eth1      Link encap:Ethernet  HWaddr 68:05:ca:39:cc:79  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:16 Memory:f05c0000-f05e0000 
+
+internet  Link encap:Ethernet  HWaddr d0:50:99:55:a9:42  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:97 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:94 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:28568 (28.5 KB)  TX bytes:20109 (20.1 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:3348605 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:3348605 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:281282652 (281.2 MB)  TX bytes:281282652 (281.2 MB)
+

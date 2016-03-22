@@ -1,0 +1,2 @@
+student@lab2pc1:~$ ping -c1 10.0.2.12
+connect: Network is unreachable

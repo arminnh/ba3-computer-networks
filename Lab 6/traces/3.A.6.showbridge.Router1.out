@@ -1,0 +1,11 @@
+Router1>show bridge                                                             
+                                                                                
+Total of 300 station blocks, 297 free                                           
+Codes: P - permanent, S - self                                                  
+                                                                                
+Bridge Group 1:                                                                 
+                                                                                
+    Address       Action   Interface       Age   RX count   TX count            
+6805.ca36.33a0   forward   FastEthernet0/0   0          3          0            
+6805.ca36.31f0   forward   FastEthernet0/0   0          2          0            
+6805.ca36.39c7   forward   Vlan1             0          3          0            

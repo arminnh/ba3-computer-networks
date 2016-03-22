@@ -1,0 +1,3 @@
+student@lab2pc1:~$ traceroute 10.0.1.31
+traceroute to 10.0.1.31 (10.0.1.31), 30 hops max, 60 byte packets
+ 1  10.0.1.31 (10.0.1.31)  2.567 ms  2.872 ms  2.869 ms
