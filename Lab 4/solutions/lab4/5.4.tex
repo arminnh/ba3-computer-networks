@@ -1,0 +1,12 @@
+\begin{lstlisting}
+Router1#show ip ospf border-routers
+
+OSPF Process 1 internal Routing Table
+
+Codes: i - Intra-area route, I - Inter-area route
+
+i 10.0.1.1 [1] via 10.0.2.1, Vlan1, ABR, Area 1, SPF 7
+\end{lstlisting}
+
+Router1 is in Area 1. Area 1 has PC1 as border router. \\
+The output of "show ip ospf border-routers" on Router1 shows that the border router is at 10.0.1.11 and can be reached through 10.0.2.1 through the router's Vlan1 interface.

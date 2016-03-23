@@ -1,0 +1,113 @@
+The link state databases of the PCs can be found in the "/Lab 4/traces/5-5.PC*.out" files.
+
+Router1
+\begin{lstlisting}
+            OSPF Router with ID (10.0.2.3) (Process ID 1)
+
+                Router Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+10.0.1.1        10.0.1.1        712         0x80000009 0x005DB1 1
+10.0.2.3        10.0.2.3        729         0x80000005 0x0011B2 2
+10.0.3.4        10.0.3.4        711         0x80000008 0x0007BA 2
+10.0.4.5        10.0.4.5        707         0x80000003 0x004F68 2
+
+                Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+10.0.2.1        10.0.1.1        712         0x80000005 0x00B852
+10.0.3.4        10.0.3.4        730         0x80000001 0x0072A5
+10.0.4.4        10.0.3.4        711         0x80000002 0x00937E
+
+                Summary Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+10.0.1.0        10.0.1.1        832         0x80000001 0x00DA61
+10.0.5.0        10.0.1.1        242         0x80000001 0x00131B
+10.0.6.0        10.0.1.1        242         0x80000001 0x00121A
+10.0.7.0        10.0.1.1        244         0x80000001 0x000724
+\end{lstlisting}
+
+Router2
+\begin{lstlisting}
+            OSPF Router with ID (10.0.4.5) (Process ID 1)
+
+                Router Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+10.0.1.1        10.0.1.1        684         0x80000009 0x005DB1 1
+10.0.2.3        10.0.2.3        702         0x80000005 0x0011B2 2
+10.0.3.4        10.0.3.4        683         0x80000008 0x0007BA 2
+10.0.4.5        10.0.4.5        679         0x80000003 0x004F68 2
+
+                Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+10.0.2.1        10.0.1.1        684         0x80000005 0x00B852
+10.0.3.4        10.0.3.4        703         0x80000001 0x0072A5
+10.0.4.4        10.0.3.4        683         0x80000002 0x00937E
+
+                Summary Net Link States (Area 1)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+10.0.1.0        10.0.1.1        805         0x80000001 0x00DA61
+10.0.5.0        10.0.1.1        215         0x80000001 0x00131B
+10.0.6.0        10.0.1.1        215         0x80000001 0x00121A
+10.0.7.0        10.0.1.1        217         0x80000001 0x000724
+\end{lstlisting}
+
+Router3
+\begin{lstlisting}
+            OSPF Router with ID (10.0.6.6) (Process ID 1)                       
+                                                                                
+                Router Link States (Area 2)                                     
+                                                                                
+Link ID         ADV Router      Age         Seq#       Checksum Link count      
+10.0.1.2        10.0.1.2        248         0x80000005 0x00D72D 1               
+10.0.6.6        10.0.6.6        281         0x80000006 0x002C6E 2               
+10.0.6.7        10.0.6.7        284         0x8000000A 0x004259 2               
+10.0.7.8        10.0.7.8        280         0x80000005 0x00622D 2               
+                                                                                
+                Net Link States (Area 2)                                        
+                                                                                
+Link ID         ADV Router      Age         Seq#       Checksum                 
+10.0.5.6        10.0.6.6        247         0x80000002 0x00F5D7                 
+10.0.6.7        10.0.6.7        290         0x80000002 0x009D60                 
+10.0.7.7        10.0.6.7        284         0x80000002 0x00B742                 
+                                                                                
+                Summary Net Link States (Area 2)                                
+                                                                                
+Link ID         ADV Router      Age         Seq#       Checksum                 
+10.0.1.0        10.0.1.2        249         0x80000001 0x00D466                 
+10.0.2.0        10.0.1.2        249         0x80000001 0x002E02                 
+10.0.3.0        10.0.1.2        249         0x80000001 0x002D01                 
+10.0.4.0        10.0.1.2        249         0x80000001 0x00220B    
+\end{lstlisting}
+
+Router4
+\begin{lstlisting}
+            OSPF Router with ID (10.0.7.8) (Process ID 1)                       
+                                                                                
+                Router Link States (Area 2)                                     
+                                                                                
+Link ID         ADV Router      Age         Seq#       Checksum Link count      
+10.0.1.2        10.0.1.2        333         0x80000005 0x00D72D 1               
+10.0.6.6        10.0.6.6        368         0x80000006 0x002C6E 2               
+10.0.6.7        10.0.6.7        369         0x8000000A 0x004259 2               
+10.0.7.8        10.0.7.8        363         0x80000005 0x00622D 2               
+                                                                                
+                Net Link States (Area 2)                                        
+                                                                                
+Link ID         ADV Router      Age         Seq#       Checksum                 
+10.0.5.6        10.0.6.6        335         0x80000002 0x00F5D7                 
+10.0.6.7        10.0.6.7        375         0x80000002 0x009D60                 
+10.0.7.7        10.0.6.7        369         0x80000002 0x00B742                 
+                                                                                
+                Summary Net Link States (Area 2)                                
+                                                                                
+Link ID         ADV Router      Age         Seq#       Checksum                 
+10.0.1.0        10.0.1.2        334         0x80000001 0x00D466                 
+10.0.2.0        10.0.1.2        334         0x80000001 0x002E02                 
+10.0.3.0        10.0.1.2        334         0x80000001 0x002D01                 
+10.0.4.0        10.0.1.2        352         0x80000001 0x00220B
+\end{lstlisting}

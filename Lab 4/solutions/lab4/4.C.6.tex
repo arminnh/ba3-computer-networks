@@ -1,0 +1,38 @@
+\begin{lstlisting}
+No.     Time        Source                Destination           Protocol Length Info
+      1 0.000000    10.0.1.2              224.0.0.5             OSPF     82     Hello Packet
+
+Frame 1: 82 bytes on wire (656 bits), 82 bytes captured (656 bits)
+Ethernet II, Src: IntelCor_36:31:f0 (68:05:ca:36:31:f0), Dst: IPv4mcast_00:00:05 (01:00:5e:00:00:05)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.5 (224.0.0.5)
+Open Shortest Path First
+    OSPF Header
+        OSPF Version: 2
+        Message Type: Hello Packet (1)
+        Packet Length: 48
+        Source OSPF Router: 10.0.1.2 (10.0.1.2)
+        Area ID: 0.0.0.1
+        Packet Checksum: 0xd093 [correct]
+        Auth Type: Null
+        Auth Data (none)
+    OSPF Hello Packet
+        Network Mask: 255.255.255.0
+        Hello Interval: 10 seconds
+        Options: 0x02 (E)
+        Router Priority: 1
+        Router Dead Interval: 40 seconds
+        Designated Router: 10.0.1.2
+        Backup Designated Router: 10.0.1.1
+        Active Neighbor: 10.0.1.1
+\end{lstlisting}
+
+The packet consists of an "OSPF Header part" and an "OSPF Hello Packet" part. The actual link state advertisement information can be found in the "OSPF Hello Packet" part: \\
+
+Network Mask: the subnet mask of the advertising OSPF node \\
+Hello Interval: the interval at which OSPF Hello Packets are sent \\
+Options: extra information about the local advertising node's capabilities \\
+Router Priority: the priotity of the local node \\
+Router Dead Interval: the death interval requested by the advertising node, describes how long to wait for hello packets before declaring the node dead \\
+Designated Router: the ip address of the current designated router:  the routers in a network select a designated router and a backup designated router which act as a hub to reduce traffic between routers.  \\
+Backup Designated Router: the ip address of the current backup designated router \\
+Active Neighbor: the router IDs of the OSPF router from which an OSPF Hello Packet has been seen on the network \\
