@@ -1,0 +1,5 @@
+From PC1 to PC2: 7 packets, total packet length: 10710 bytes, total application data length: 10240 bytes \\
+
+From PC2 to PC1: 9 packets, total packet length: 602 bytes, total application data length: 0 bytes \\
+
+We see that only PC1 has sent application data, and more specifically has sent 10 * 1024 bytes of data (flags -l1024 -n10 in nttcp).
