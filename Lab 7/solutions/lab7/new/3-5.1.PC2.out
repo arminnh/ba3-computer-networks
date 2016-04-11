@@ -1,0 +1,45 @@
+student@lab2pc1:~$ netstat -rn
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+10.0.1.0        0.0.0.0         255.255.255.0   U         0 0          0 eth0
+10.0.2.0        0.0.0.0         255.255.255.0   U         0 0          0 eth1
+
+
+student@lab2pc1:~$ ifconfig -a
+eth0      Link encap:Ethernet  HWaddr 68:05:ca:36:31:f0  
+          inet addr:10.0.1.1  Bcast:10.0.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::6a05:caff:fe36:31f0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:989 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:665 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:9 txqueuelen:1000 
+          RX bytes:172049 (172.0 KB)  TX bytes:103391 (103.3 KB)
+          Interrupt:19 Memory:f06c0000-f06e0000 
+
+eth1      Link encap:Ethernet  HWaddr 68:05:ca:39:e1:36  
+          inet addr:10.0.2.2  Bcast:10.0.2.255  Mask:255.255.255.0
+          inet6 addr: fe80::6a05:caff:fe39:e136/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:1563 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1600 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:162818 (162.8 KB)  TX bytes:205981 (205.9 KB)
+          Interrupt:16 Memory:f05c0000-f05e0000 
+
+internet  Link encap:Ethernet  HWaddr d0:50:99:55:a9:10  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:103555 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:8705 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:117730597 (117.7 MB)  TX bytes:1148488 (1.1 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:5361 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:5361 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:901868 (901.8 KB)  TX bytes:901868 (901.8 KB)
+
+student@lab2pc1:~$ 

@@ -1,0 +1,28 @@
+root@lab2pc1:~# ftp -d 128.143.136.22
+Connected to 128.143.136.22.
+220 (vsFTPd 3.0.2)
+ftp: setsockopt: Bad file descriptor
+Name (128.143.136.22:student): student
+---> USER student
+331 Please specify the password.
+Password:
+---> PASS XXXX
+230 Login successful.
+---> SYST
+215 UNIX Type: L8
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> cd Desktop/Lab\ 5
+---> CWD Desktop/Lab 5
+250 Directory successfully changed.
+ftp> get header.tex
+local: header.tex remote: header.tex
+---> TYPE I
+200 Switching to Binary mode.
+---> PORT 10,0,1,2,200,241
+200 PORT command successful. Consider using PASV.
+---> RETR header.tex
+150 Opening BINARY mode data connection for header.tex (9231 bytes).
+226 Transfer complete.
+9231 bytes received in 0.02 secs (392.9 kB/s)
+ftp> 

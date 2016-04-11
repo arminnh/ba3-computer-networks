@@ -1,0 +1,4 @@
+iptables -t nat -A POSTROUTING -j SNAT --to IPAddr -s PrivateIPAddr/netmask //
+Adds the following rule to the POSTROUTING chain of the NAT table: “In IP datagrams
+that go to the public network, the IP source address PrivateIPAddr/netmask is
+changed to IPAddr”.

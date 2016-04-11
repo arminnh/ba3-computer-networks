@@ -1,0 +1,38 @@
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+10.0.1.0        0.0.0.0         255.255.255.0   U         0 0          0 eth0
+eth0      Link encap:Ethernet  HWaddr 68:05:ca:36:33:a0  
+          inet addr:10.0.1.2  Bcast:10.0.1.255  Mask:255.255.255.0
+          inet6 addr: fe80::6a05:caff:fe36:33a0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:783 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:830 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:12 txqueuelen:1000 
+          RX bytes:140872 (140.8 KB)  TX bytes:150460 (150.4 KB)
+          Interrupt:19 Memory:f06c0000-f06e0000 
+
+eth1      Link encap:Ethernet  HWaddr 68:05:ca:39:cc:79  
+          inet addr:10.0.5.11  Bcast:10.0.5.255  Mask:255.255.255.0
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:46 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:58 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:7051 (7.0 KB)  TX bytes:8069 (8.0 KB)
+          Interrupt:16 Memory:f05c0000-f05e0000 
+
+internet  Link encap:Ethernet  HWaddr d0:50:99:55:a9:42  
+          BROADCAST MULTICAST  MTU:1500  Metric:1
+          RX packets:224985 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:144710 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:109926155 (109.9 MB)  TX bytes:14609737 (14.6 MB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:4561 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:4561 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:902418 (902.4 KB)  TX bytes:902418 (902.4 KB)
+
