@@ -1,0 +1,300 @@
+If you observed ICMP error messages, include one such message in the report:
+
+\begin{lstlisting}
+No.     Time        Source                Destination           Protocol Length Info
+     47 537.418549  10.0.1.33             10.0.1.11             ICMP     590    Destination unreachable (Fragmentation needed)
+
+Frame 47: 590 bytes on wire (4720 bits), 590 bytes captured (4720 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Apr 11, 2016 10:13:49.771318000 CEST
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1460362429.771318000 seconds
+    [Time delta from previous captured frame: 0.002373000 seconds]
+    [Time delta from previous displayed frame: 0.002373000 seconds]
+    [Time since reference or first frame: 537.418549000 seconds]
+    Frame Number: 47
+    Frame Length: 590 bytes (4720 bits)
+    Capture Length: 590 bytes (4720 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:icmp:ip:tcp:data]
+    [Coloring Rule Name: ICMP errors]
+    [Coloring Rule String: icmp.type eq 3 || icmp.type eq 4 || icmp.type eq 5 || icmp.type eq 11 || icmpv6.type eq 1 || icmpv6.type eq 2 || icmpv6.type eq 3 || icmpv6.type eq 4]
+Ethernet II, Src: IntelCor_36:39:c7 (68:05:ca:36:39:c7), Dst: IntelCor_36:33:a0 (68:05:ca:36:33:a0)
+    Destination: IntelCor_36:33:a0 (68:05:ca:36:33:a0)
+        Address: IntelCor_36:33:a0 (68:05:ca:36:33:a0)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: IntelCor_36:39:c7 (68:05:ca:36:39:c7)
+        Address: IntelCor_36:39:c7 (68:05:ca:36:39:c7)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IP (0x0800)
+Internet Protocol Version 4, Src: 10.0.1.33 (10.0.1.33), Dst: 10.0.1.11 (10.0.1.11)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0xc0 (DSCP 0x30: Class Selector 6; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+        1100 00.. = Differentiated Services Codepoint: Class Selector 6 (0x30)
+        .... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)
+    Total Length: 576
+    Identification: 0x8814 (34836)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: ICMP (1)
+    Header checksum: 0xd9bd [validation disabled]
+        [Good: False]
+        [Bad: False]
+    Source: 10.0.1.33 (10.0.1.33)
+    Destination: 10.0.1.11 (10.0.1.11)
+    [Source GeoIP: Unknown]
+    [Destination GeoIP: Unknown]
+Internet Control Message Protocol
+    Type: 3 (Destination unreachable)
+    Code: 4 (Fragmentation needed)
+    Checksum: 0x164f [correct]
+    MTU of next hop: 500
+    Internet Protocol Version 4, Src: 10.0.1.11 (10.0.1.11), Dst: 10.0.2.22 (10.0.2.22)
+        Version: 4
+        Header length: 20 bytes
+        Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+            0000 00.. = Differentiated Services Codepoint: Default (0x00)
+            .... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)
+        Total Length: 1076
+        Identification: 0x985b (39003)
+        Flags: 0x02 (Don't Fragment)
+            0... .... = Reserved bit: Not set
+            .1.. .... = Don't fragment: Set
+            ..0. .... = More fragments: Not set
+        Fragment offset: 0
+        Time to live: 64
+        Protocol: TCP (6)
+        Header checksum: 0x8748 [validation disabled]
+            [Good: False]
+            [Bad: False]
+        Source: 10.0.1.11 (10.0.1.11)
+        Destination: 10.0.2.22 (10.0.2.22)
+        [Source GeoIP: Unknown]
+        [Destination GeoIP: Unknown]
+    Transmission Control Protocol, Src Port: 43803 (43803), Dst Port: 5038 (5038), Seq: 3445317143, Ack: 468857916
+        Source port: 43803 (43803)
+        Destination port: 5038 (5038)
+        Sequence number: 3445317143
+        [Stream index: 3]
+        Sequence number: 3445317143    (relative sequence number)
+        Acknowledgment number: 468857916    (relative ack number)
+        Header length: 32 bytes
+        Flags: 0x018 (PSH, ACK)
+            000. .... .... = Reserved: Not set
+            ...0 .... .... = Nonce: Not set
+            .... 0... .... = Congestion Window Reduced (CWR): Not set
+            .... .0.. .... = ECN-Echo: Not set
+            .... ..0. .... = Urgent: Not set
+            .... ...1 .... = Acknowledgment: Set
+            .... .... 1... = Push: Set
+            .... .... .0.. = Reset: Not set
+            .... .... ..0. = Syn: Not set
+            .... .... ...0 = Fin: Not set
+        Window size value: 229
+        [Calculated window size: 229]
+        [Window size scaling factor: 128]
+        Checksum: 0x8f0f [validation disabled]
+            [Good Checksum: False]
+            [Bad Checksum: False]
+        Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+            No-Operation (NOP)
+                Type: 1
+                    0... .... = Copy on fragmentation: No
+                    .00. .... = Class: Control (0)
+                    ...0 0001 = Number: No-Operation (NOP) (1)
+            No-Operation (NOP)
+                Type: 1
+                    0... .... = Copy on fragmentation: No
+                    .00. .... = Class: Control (0)
+                    ...0 0001 = Number: No-Operation (NOP) (1)
+            Timestamps: TSval 61392463, TSecr 61391765
+                Kind: Timestamp (8)
+                Length: 10
+                Timestamp value: 61392463
+                Timestamp echo reply: 61391765
+    Data (496 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0090  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0100  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0110  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0120  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0130  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0140  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0150  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0160  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0170  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0180  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0190  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+        Data: 000000000000000000000000000000000000000000000000...
+        [Length: 496]
+\end{lstlisting}
+
+
+The first TCP segment that is sent after PC1 has received the ICMP error message:
+
+\begin{lstlisting}
+No.     Time        Source                Destination           Protocol Length Info
+     48 537.418590  10.0.1.11             10.0.2.22             TCP      566    [TCP Out-Of-Order] 43803 > 5038 [ACK] Seq=1 Ack=1 Win=29312 Len=500 TSval=61392464 TSecr=61391765
+
+Frame 48: 566 bytes on wire (4528 bits), 566 bytes captured (4528 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Apr 11, 2016 10:13:49.771359000 CEST
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1460362429.771359000 seconds
+    [Time delta from previous captured frame: 0.000041000 seconds]
+    [Time delta from previous displayed frame: 0.000041000 seconds]
+    [Time since reference or first frame: 537.418590000 seconds]
+    Frame Number: 48
+    Frame Length: 566 bytes (4528 bits)
+    Capture Length: 566 bytes (4528 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:tcp:data]
+    [Coloring Rule Name: Bad TCP]
+    [Coloring Rule String: tcp.analysis.flags && !tcp.analysis.window_update]
+Ethernet II, Src: IntelCor_36:33:a0 (68:05:ca:36:33:a0), Dst: IntelCor_36:39:c7 (68:05:ca:36:39:c7)
+    Destination: IntelCor_36:39:c7 (68:05:ca:36:39:c7)
+        Address: IntelCor_36:39:c7 (68:05:ca:36:39:c7)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: IntelCor_36:33:a0 (68:05:ca:36:33:a0)
+        Address: IntelCor_36:33:a0 (68:05:ca:36:33:a0)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IP (0x0800)
+Internet Protocol Version 4, Src: 10.0.1.11 (10.0.1.11), Dst: 10.0.2.22 (10.0.2.22)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)
+    Total Length: 552
+    Identification: 0x985d (39005)
+    Flags: 0x02 (Don't Fragment)
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: TCP (6)
+    Header checksum: 0x8952 [validation disabled]
+        [Good: False]
+        [Bad: False]
+    Source: 10.0.1.11 (10.0.1.11)
+    Destination: 10.0.2.22 (10.0.2.22)
+    [Source GeoIP: Unknown]
+    [Destination GeoIP: Unknown]
+Transmission Control Protocol, Src Port: 43803 (43803), Dst Port: 5038 (5038), Seq: 1, Ack: 1, Len: 500
+    Source port: 43803 (43803)
+    Destination port: 5038 (5038)
+    [Stream index: 3]
+    Sequence number: 1    (relative sequence number)
+    [Next sequence number: 501    (relative sequence number)]
+    Acknowledgment number: 1    (relative ack number)
+    Header length: 32 bytes
+    Flags: 0x010 (ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 0... = Push: Not set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+    Window size value: 229
+    [Calculated window size: 29312]
+    [Window size scaling factor: 128]
+    Checksum: 0x193b [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        No-Operation (NOP)
+            Type: 1
+                0... .... = Copy on fragmentation: No
+                .00. .... = Class: Control (0)
+                ...0 0001 = Number: No-Operation (NOP) (1)
+        No-Operation (NOP)
+            Type: 1
+                0... .... = Copy on fragmentation: No
+                .00. .... = Class: Control (0)
+                ...0 0001 = Number: No-Operation (NOP) (1)
+        Timestamps: TSval 61392464, TSecr 61391765
+            Kind: Timestamp (8)
+            Length: 10
+            Timestamp value: 61392464
+            Timestamp echo reply: 61391765
+    [SEQ/ACK analysis]
+        [Bytes in flight: 2049]
+        [TCP Analysis Flags]
+            [This frame is a (suspected) out-of-order segment]
+                [Expert Info (Warn/Sequence): Out-Of-Order segment]
+                    [Message: Out-Of-Order segment]
+                    [Severity level: Warn]
+                    [Group: Sequence]
+Data (500 bytes)
+
+0000  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0010  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0020  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0030  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0040  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0050  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0060  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0070  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0080  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0090  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+00f0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0100  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0110  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0120  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0130  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0140  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0150  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0160  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0170  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0180  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+0190  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01a0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01b0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01c0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01d0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01e0  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+01f0  00 00 00 00                                       ....
+    Data: 000000000000000000000000000000000000000000000000...
+    [Length: 500]
+\end{lstlisting}
