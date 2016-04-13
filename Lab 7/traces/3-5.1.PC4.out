@@ -1,9 +1,11 @@
 root@lab2pc1:~/labdata# netstat -rn
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
-0.0.0.0         0.0.0.0         0.0.0.0         U         0 0          0 eth1
+0.0.0.0         10.0.1.1        0.0.0.0         UG        0 0          0 eth0
 10.0.1.0        0.0.0.0         255.255.255.0   U         0 0          0 eth0
-169.254.0.0     0.0.0.0         255.255.0.0     U         0 0          0 eth1
+
+
+
 root@lab2pc1:~/labdata# ifconfig -a
 eth0      Link encap:Ethernet  HWaddr 68:05:ca:39:e1:2f  
           inet addr:10.0.1.5  Bcast:10.0.1.255  Mask:255.255.255.0

@@ -1,0 +1,29 @@
+\begin{lstlisting}
+(1) PC3% ping -c 3 10.0.1.3	: SUCCESS
+(2) PC3% ping -c 3 128.143.136.1: SUCCESS
+
+(3) Router3# ping 10.0.1.2	: SUCCESS
+(4) Router3# ping 128.143.136.1	: SUCCESS
+
+(5) PC4% ping -c 3 10.0.1.2	: UNREACHABLE
+(6) PC4% ping -c 3 200.0.0.2	: SUCCESS
+\end{lstlisting}
+
+\begin{enumerate}
+\item Pings to local Router3.
+\item Router2 is PC3's default gateway, Request is sent to Router2. \\
+      Request's source IP is changed to 200.0.0.2. \\ 
+      PC4 is Router2's default gateway, Request is sent to PC4. \\
+      On PC4, traffic with destination IP address 200.0.0.0/24 is forwarded to Router2, so Reply is sent to Router2. \\
+      Reply's destination IP is changed to 10.0.1.2. \\
+      Reply is sent to PC3.
+\item Pings to local PC3.
+\item Analogous to (2).
+\item PC4 cannot reach private address 10.0.1.2. 10.0.0.0/24 does not match anything in its routing table.
+\item On PC4, traffic with destination IP address 200.0.0.0/24 is forwarded to Router2, so Request is sent to Router2. \\
+      Request's destination IP is changed to 10.0.1.2. \\
+      Request is sent to PC3. \\
+      Router2 is PC3's default gateway, Reply is sent to Router2. \\
+      Reply's source IP is changed to 200.0.0.2. \\ 
+      PC4 is Router2's default gateway, Reply is sent to PC4. \\
+\end{enumerate}

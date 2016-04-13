@@ -1,7 +1,12 @@
+student@lab2pc1:~$ netstat -rn
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
 0.0.0.0         10.0.3.1        0.0.0.0         UG        0 0          0 eth0
 10.0.3.0        0.0.0.0         255.255.255.0   U         0 0          0 eth0
+
+
+
+student@lab2pc1:~$ ifconfig -a
 eth0      Link encap:Ethernet  HWaddr 68:05:ca:36:39:c7  
           inet addr:10.0.3.23  Bcast:10.0.3.255  Mask:255.255.255.0
           inet6 addr: fe80::6a05:caff:fe36:39c7/64 Scope:Link
@@ -35,4 +40,3 @@ lo        Link encap:Local Loopback
           TX packets:247 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:0 
           RX bytes:23782 (23.7 KB)  TX bytes:23782 (23.7 KB)
-
