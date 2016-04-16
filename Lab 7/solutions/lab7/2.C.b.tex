@@ -1,1 +1,12 @@
-** todo **
+interface: the interface the lease counts for \\
+fixed-address: the IP address received by the server \\
+option subnet-mask: the subnet mask received by the server \\
+option routers: available DHCP servers \\
+option dhcp-lease-time: total duration of the lease in seconds \\
+option dhcp-message-type: type of DHCP message sent for this lease entry \\
+option dhcp-server-identifier: the DHCP server that the client received this lease from \\
+renew: timestamp of when this lease was received \\
+rebind: timestamp of then to enter rebinding state \\
+expire: timestamp of when this lease expires \\
+\\
+The client can reach the server using the dhcp-server-identifier option. If the server cannot be reached by the rebind time, the client will enter rebinding state. From here on, it will try to contact any DCHP server by broadcasting a DHCP Discovery package.

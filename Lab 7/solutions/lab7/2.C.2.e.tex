@@ -1,0 +1,13 @@
+\textbf{DHCP Discover}: \\
+Broadcasted by a DHCP client to request a DCHP offer packet from a DHCP server on the network.
+
+\textbf{DHCP Offer}: \\
+Unicast from DHCP server to DHCP client. Contains the available IP address and other information (such as subnet mask, lease time, default gateway, etc.) that the DHCP server offers to the DHCP client.
+
+\textbf{DHCP Request}: \\
+Broadcast from client to server. The client requests the server to assign the offered IP address to it.
+
+\textbf{DHCP ACK}: \\
+Unicast from server to client. The server acknowledges the assignment of the offered IP address for a specific lease time. \\
+\\
+We note that the Offer and ACK packets contain exactly the same information, except for the Message Type.

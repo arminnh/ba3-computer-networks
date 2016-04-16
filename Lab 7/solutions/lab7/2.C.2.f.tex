@@ -1,0 +1,86 @@
+\textbf{(1) Subnet Mask} \\
+    example data:
+    \begin{lstlisting}
+    Length: 4
+    Subnet Mask: 255.255.255.0 (255.255.255.0)
+    \end{lstlisting}
+    The subnet mask set by a server for a client.\\
+ 
+ \textbf{(12) Host Name} \\
+    example data:
+    \begin{lstlisting}
+    Length: 7
+    Host Name: lab2pc1
+    \end{lstlisting}
+    The host name of the sender.\\
+   
+\textbf{(3) Router} \\
+    example data:
+    \begin{lstlisting}
+    Length: 4
+    Router: 10.0.1.21 (10.0.1.21) 
+    \end{lstlisting}
+    List of available routers.\\
+    
+\textbf{(50) Requested IP Address} \\
+    example data:
+    \begin{lstlisting}
+    Length: 4
+    Requested IP Address: 10.0.1.2 (10.0.1.2)
+    \end{lstlisting}
+    Set by the client to request a specific IP address.\\
+    
+     
+\textbf{(51) IP Address Lease Time} \\
+    example data:
+    \begin{lstlisting}
+    Length: 4
+    IP Address Lease Time: (600s) 10 minutes
+    \end{lstlisting}
+    The lease time for the IP assignment, set by the server.\\
+    
+\textbf{(53) DHCP Message Type} \\
+    example data:
+    \begin{lstlisting}
+    Length: 1
+    DHCP: Discover (1)
+    \end{lstlisting}
+    The type of the DHCP message (e.g. Dicover, Offer, Request, ACK).\\
+    
+\textbf{(54) DHCP Server Identifier} \\
+    example data:
+    \begin{lstlisting}
+    Length: 4
+    DHCP Server Identifier: 10.0.1.21 (10.0.1.21)
+    \end{lstlisting}
+    Set by the server so clients can differentiate between different lease offers.\\
+    
+    
+\textbf{(55) Parameter Request List} \\
+    example data:
+    \begin{lstlisting}
+    Length: 13
+    Parameter Request List Item: (1) Subnet Mask
+    Parameter Request List Item: (28) Broadcast Address
+    Parameter Request List Item: (2) Time Offset
+    Parameter Request List Item: (3) Router
+    Parameter Request List Item: (15) Domain Name
+    Parameter Request List Item: (6) Domain Name Server
+    Parameter Request List Item: (119) Domain Search
+    Parameter Request List Item: (12) Host Name
+    Parameter Request List Item: (44) NetBIOS over TCP/IP Name Server
+    Parameter Request List Item: (47) NetBIOS over TCP/IP Scope
+    Parameter Request List Item: (26) Interface MTU
+    Parameter Request List Item: (121) Classless Static Route
+    Parameter Request List Item: (42) Network Time Protocol Servers
+    \end{lstlisting}
+    Set by the client to request values for specified configuration parameters. \\
+    
+\textbf{(255) End} \\
+    example data:
+    \begin{lstlisting}
+    Option End: 255 
+    \end{lstlisting}
+    Marks the end of the options.\\
+    
+
