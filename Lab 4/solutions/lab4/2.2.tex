@@ -1,4 +1,4 @@
-\emph{Step 4. Compare the output of "netstat -rn" to the output of "show ip rip".}
+\emph{Step 4. Compare the output of ``netstat -rn'' to the output of ``show ip rip''.}
 
 \textbf{PC1:} \\
 show ip rip:
@@ -24,9 +24,8 @@ Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
 10.0.4.0        10.0.1.1        255.255.255.0   UG        0 0          0 eth0
 \end{lstlisting}
 
-We see that "show ip rip" shows more information related to RIP, while "netstat -rn" provides a general overview of the routing table.
-Information specific to RIP, such as Metric, From, Tag, Time is not shown in "netstat -rn".  
-** nog wat ?? **
+We see that ``show ip rip'' shows more information related to RIP, while ``netstat -rn'' provides a general overview of the routing table.
+Information specific to RIP, such as Metric, From, Tag, Time, sub-codes, is not shown in ``netstat -rn''.  
 
 \emph{Step 5. Repeat Steps 1-5 for the other three Linux PCs.} \\
 

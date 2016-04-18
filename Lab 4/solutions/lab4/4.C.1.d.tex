@@ -1,2 +1,1 @@
-*** niet zo zeker \\
-Hello packets are multicast by OSPF routers to  224.0.0.5. This enables dynamic discovery of neighbors and maintains neighbor relationships.
+LS Update packets are multicast by OSPF routers to 224.0.0.5, which contain link state advertisements (LSA). When a router receives an LSA, it forwards the LSA to all its neighbors except the source of the LSA. In order to prevent the flooding from continuing indefinitely, each LSA has a sequence number. If a router receives an LSA with a sequence number it has already received previously, it won't forward the LSA anymore.
