@@ -1,4 +1,7 @@
-The MSS is negotiated in the three way handshake and determined by the minimum MTU value of the two pcs. We see in this case that the MSS is 460. \\
+Only when an intermediary hop is causing a ``bottleneck'' for a packet to be forwarded due to its MTU being exceeded will there be any ICMP error messages: the hosts themselves have knowledge of their own MTUs and based on those, the MSS is negotiated in the three way handshake. We see in this case that the MSS is 460. \\
+
+\iffalse
 This size is respected by all of the packets in the nttcp transmission, so no ICMP error message was generated. \\
+\fi
 
 The DF-bit is set in the IP datagrams.

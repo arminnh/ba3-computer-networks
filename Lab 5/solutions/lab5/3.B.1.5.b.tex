@@ -1,6 +1,6 @@
 The ICMP error messages are used for Path MTU Discovery to reduce the TCP transmission's MSS value and send smaller packets. \\
 
-We see this in packets 45, 47 and 48 in the file "/Lab 5/traces/3.B.PC1.pcap": \\
+We see this in packets 45, 47 and 48 in the file ``Lab 5/traces/3.B.PC1.pcap'': \\
 \begin{itemize}
     \item packet 45 is a TCP packet sent by PC1 with a payload of 1024 bytes, which exceeds PC3's MTU. \\
     \item PC1 then receives packet 47 from PC3, which is the ICMP error message. \\

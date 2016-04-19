@@ -1,3 +1,4 @@
+\iffalse
 \begin{lstlisting}
 No.     Time        Source                Destination           Protocol Length Info
       1 0.000000    10.0.1.2              224.0.0.5             OSPF     82     Hello Packet
@@ -36,3 +37,59 @@ Router Dead Interval: the death interval requested by the advertising node, desc
 Designated Router: the ip address of the current designated router:  the routers in a network select a designated router and a backup designated router which act as a hub to reduce traffic between routers.  \\
 Backup Designated Router: the ip address of the current backup designated router \\
 Active Neighbor: the router IDs of the OSPF router from which an OSPF Hello Packet has been seen on the network \\
+
+\fi
+
+**** NOT FINISHED ****
+
+\begin{lstlisting}
+Frame 49: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: IntelCor_36:31:f0 (68:05:ca:36:31:f0), Dst: IPv4mcast_00:00:05 (01:00:5e:00:00:05)
+Internet Protocol Version 4, Src: 10.0.1.2 (10.0.1.2), Dst: 224.0.0.5 (224.0.0.5)
+Open Shortest Path First
+    OSPF Header
+        OSPF Version: 2
+        Message Type: LS Update (4)
+        Packet Length: 64
+        Source OSPF Router: 10.0.1.2 (10.0.1.2)
+        Area ID: 0.0.0.1
+        Packet Checksum: 0x3e6a [correct]
+        Auth Type: Null
+        Auth Data (none)
+    LS Update Packet
+        Number of LSAs: 1
+        LS Type: Router-LSA
+            LS Age: 2 seconds
+            Do Not Age: False
+            Options: 0x22 (DC, E)
+                0... .... = DN: DN-bit is NOT set
+                .0.. .... = O: O-bit is NOT set
+                ..1. .... = DC: Demand Circuits are supported
+                ...0 .... = L: The packet does NOT contain LLS data block
+                .... 0... = NP: NSSA is NOT supported
+                .... .0.. = MC: NOT Multicast Capable
+                .... ..1. = E: External Routing Capability
+                .... ...0 = MT: NO Multi-Topology Routing
+            LS Type: Router-LSA (1)
+            Link State ID: 10.0.7.8
+            Advertising Router: 10.0.7.8 (10.0.7.8)
+            LS Sequence Number: 0x80000009
+            LS Checksum: 0xcffc
+            Length: 36
+            Flags: 0x00
+                .... .0.. = V: NO Virtual link endpoint
+                .... ..0. = E: NO AS boundary router
+                .... ...0 = B: NO Area border router
+            Number of Links: 1
+            Type: Transit  ID: 10.0.5.6        Data: 10.0.5.8        Metric: 1
+                IP address of Designated Router: 10.0.5.6
+                Link Data: 10.0.5.8
+                Link Type: 2 - Connection to a transit network
+                Number of TOS metrics: 0
+                TOS 0 metric: 1
+\end{lstlisting}
+
+The packet consists of an ``OSPF Header'' part and an ``OSPF LS Update'' part. The actual link state advertisements are in the ``OSPF LS Update'' part.
+
+We have a Router-LSA.
+The LSA in this packet originated from 10.0.7.8, which is vlan1 of Router4.

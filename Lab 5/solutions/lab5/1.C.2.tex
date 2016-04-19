@@ -1,1 +1,5 @@
-**** TODO ****
+Total: \\
+UDP transfer: 10676 B; TCP transfer: 11312 B \\
+As is expected, the total amount of data transferred over TCP is greater than the amount of data transferred via UDP, since the TCP header is larger and the UDP received does not send any acknowledgements. Thus, using TCP, there was an increase of approximately 6\%. \\
+Payload data: \\
+The TCP transfer had exactly the amount of payload data we'd expect: 10 * 1024 B = 10240 B. The UDP transfer had 16 B more, spread over four packets each carrying 4 B of payload data. We don't know why that's the case.
