@@ -1,4 +1,5 @@
-In the first two packets of the three-way handshake, the window sizes are rather large: 29200 for PC1 and 28960 for PC2. In subsequent packets, it drops down to about 227-229.
+In the first two packets of the three-way handshake, the window sizes are rather large: 29200 for PC1 and 28960 for PC2. After this, the data is sent with a window size fluctuating between 227 and 229, with a scaling factor of 128, so respectively 29056 and 29312. \\
+This window scale is also agreed upon in the handshake.
 
 \begin{lstlisting}
 Frame 1: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
@@ -77,3 +78,4 @@ Transmission Control Protocol, Src Port: 48613 (48613), Dst Port: 23 (23), Seq: 
     [SEQ/ACK analysis]
 Telnet
 \end{lstlisting}
+

@@ -1,4 +1,7 @@
-We observed 7 attempts. The first retransmission occurs after a 1 second interval, then 2 seconds, then 4 seconds, then 8 seconds, then 16 seconds, and finally 32 seconds. Every attempt, the waiting time is doubled.
+We observed 7 attempts. Each try there is more time between retries.\\
+1 second, 2 seconds, 4, 8, 16, 32.\\
+So $2^{i-1}$ seconds for the $i^{th}$ retry.
+
 
 \begin{lstlisting}
 1	0.000000	10.0.5.11	10.0.5.100	TCP	74	33347→23 [SYN] Seq=2556468869 Win=29200 Len=0 MSS=1460 SACK_PERM=1 TSval=4441845 TSecr=0 WS=128

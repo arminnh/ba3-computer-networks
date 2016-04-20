@@ -1,1 +1,2 @@
-*** TODO ***
+Nagle's algorithm waits until an ACK is received for the previous character sent, if this does not arrive in time, the following characters are kept in buffer till the ACK arrives or the buffer reaches a certain size. \\
+When the ACK arrives, the characters in buffer are sent in a single packet.\\

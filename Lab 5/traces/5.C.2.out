@@ -1,5 +1,4 @@
-\begin{lstlisting}
-    No.     Time        Source                Destination           Protocol Length Info
+No.     Time        Source                Destination           Protocol Length Info
     294 24.417583   10.0.1.11             10.0.2.22             TELNET   69     Telnet Data ...
 
 Frame 294: 69 bytes on wire (552 bits), 69 bytes captured (552 bits)
@@ -97,5 +96,3 @@ Transmission Control Protocol, Src Port: 51889 (51889), Dst Port: telnet (23), S
         [Bytes in flight: 3]
 Telnet
     Data: fka
-
-\end{lstlisting}

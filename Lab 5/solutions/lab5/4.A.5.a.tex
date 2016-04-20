@@ -1,4 +1,4 @@
-The first packet with the FIN flag set is from PC2 (server), contrary to when the client closes the connection. Also, this time the server sends one last ACK after sending a packet with the FIN flag set, instead of the server.
+The first packet with the FIN flag set is from PC2 (server), contrary to when the client closes the connection, then the client replies and the server acknowledges.
 
 \begin{lstlisting}
 348	209.621366	10.0.5.22	10.0.5.11	TCP	66	23→48615 [FIN, ACK] Seq=419429485 Ack=3956140201 Win=29056 Len=0 TSval=4266788 TSecr=4252924
