@@ -1,1 +1,3 @@
-*** TODO ***
+We do see delayed acknowledgements, which is not abnormal.\\
+It could become a problem however, if a delayed ACK would be kept waiting until all data is received, but Nagle's algorithm does not send out all the data yet, waiting for an ACK, resulting in a deadlock which resumes when a timeout is reached.\\
+But we have not been able to reproduce this situation.
