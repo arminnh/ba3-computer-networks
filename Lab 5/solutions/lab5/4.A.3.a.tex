@@ -1,1 +1,7 @@
-**** TODO ****
+First packet: SYN \\
+Second packet: SYN \& ACK \\
+Third packet: ACK \\
+
+The client sends the first packet, so a receival of a SYN packet by the server is interpreted as the beginning of a handshake, and thus a connection.\\
+It is replied with a SYN-ACK packet, the client interprets this as the reply on its SYN.\\
+At last, the client confirms the SYN-ACK with its ACK packet.
