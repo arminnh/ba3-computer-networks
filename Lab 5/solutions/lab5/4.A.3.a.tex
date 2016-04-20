@@ -1,1 +1,10 @@
-**** TODO ****
+The three-way handshake packets are packets no. 1, 2 and 3 in ``Lab 5/traces/4.A.PC1.pcap''. \\
+The first packet (from client (PC1) to server (PC2)) has the SYN flag set. PC2 recognizes this as the first packet of the three-way handshake. SYN is for synchronizing the sequence numbers. Say PC1 sent sequence number i, then PC2 knows that the next packet from PC1 will have sequence number i + 1. In this case, because the SYN flag is set, even though no application data was sent, the sequence number increases by 1. \\
+The next packet (from server to client) has the SYN and ACK flags set. PC1 interprets this as the second packet in the three-way handshake. Say PC2 sent sequence number j, then PC1 knows the next packet from PC2 will have sequence number j + 1. This packet also acknowledges PC1's initial packet by sending acknowledgement number i + 1 (an ACK always has the sequence number of the first byte the host expects to receive next). \\
+Then PC1 concludes the three-way handshake by sending one more packet with sequence number i + 1 and an acknowledgement of PC2's packet with sequence number j + 1.
+
+\begin{lstlisting}
+1	0.000000	10.0.5.11	10.0.5.22	TCP	74	48613→23 [SYN] Seq=2495102103 Win=29200 Len=0 MSS=1460 SACK_PERM=1 TSval=4215509 TSecr=0 WS=128
+2	0.000621	10.0.5.22	10.0.5.11	TCP	74	23→48613 [SYN, ACK] Seq=3213249774 Ack=2495102104 Win=28960 Len=0 MSS=1460 SACK_PERM=1 TSval=4214383 TSecr=4215509 WS=128
+3	0.000660	10.0.5.11	10.0.5.22	TCP	66	48613→23 [ACK] Seq=2495102104 Ack=3213249775 Win=29312 Len=0 TSval=4215509 TSecr=4214383
+\end{lstlisting}

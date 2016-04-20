@@ -1,1 +1,6 @@
-a [RST,ACK] is returned by the receiving server. This means that the port is closed.
+A TCP packet with [RST,ACK] is returned by the receiving server. This means that the port is closed.
+
+\begin{lstlisting}
+1	0.000000	10.0.5.11	10.0.5.22	TCP	74	49306→80 [SYN] Seq=4067677396 Win=29200 Len=0 MSS=1460 SACK_PERM=1 TSval=4578023 TSecr=0 WS=128
+2	0.000546	10.0.5.22	10.0.5.11	TCP	60	80→49306 [RST, ACK] Seq=0 Ack=4067677397 Win=0 Len=0
+\end{lstlisting}
