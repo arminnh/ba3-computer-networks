@@ -1,0 +1,3 @@
+Karn's algorithm is used to get more accurate RTT values when using TCP.
+Retransmitted segments are ignored when calculating the RTT, only using ACKs for packets that were succesfully delivered without a retransmission.\\
+However this may result in failure as the RTT will never be updated when all packets sent are retransmissions, possibly resulting in endless retransmissions.

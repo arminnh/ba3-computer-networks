@@ -1,0 +1,13 @@
+According to RFC 6298:\\
+- Until a round-trip time (RTT) measurement has been made for a segment sent between the sender and receiver, the sender SHOULD set RTO <- 1 second.\\
+- When the first RTT measurement R is made, the host MUST set: \\
+--- SRTT <- R\\
+--- RTTVAR <- R/2\\
+--- RTO <- SRTT + max (G, 4*RTTVAR)\\
+- When a subsequent RTT measurement R' is made, a host MUST set:\\
+--- RTTVAR <- (0.75) * RTTVAR + 0.25 * |SRTT - R'|\\
+--- SRTT <- (0.875) * SRTT + 0.125 * R'\\
+--- RTO <- SRTT + max (G, 4*RTTVAR)\\
+- When RTO < 1 second => RTO is set to 1 second.\\
+With G the clock granularity, defaulted on 6 seconds. Finer granularities (in the range of dozens of milliseconds) appear to perform better, at the cost of more overhead.
+

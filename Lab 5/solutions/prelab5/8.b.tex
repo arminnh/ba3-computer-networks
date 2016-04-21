@@ -1,0 +1,3 @@
+Congestion avoidance tries to avoid having the medium congested by all of its data, taking other streams into account as well (avoiding TCP global synchronisation).\\
+Slow start starts with sending a few packets, defined by the congestion window: the amount of packets it may sent before having to stop to avoid congestion. This window is increased for each ACK received, resulting in an exponential growth.\\ When loss is detectedhalf of the current window size is stored as threshold value and slow start is restarted from the initial value. When the previous threshold value is reached, linear growth is used, increasing the window by 1 for each RTT. \\
+When the receivers' advertised window size is reached, the congestion window stops growing.
