@@ -1,1 +1,22 @@
-3 packets per keystroke.
+There are 3 packets per keystroke. The client sends one packet with the typed character. The server echoes the character, sending one packet back, upon which it also piggybacks the acknowledgement of the receival of the client's packet. The server then sends an acknowledgement of the server's echoed character. \\
+If there was no piggybacking of acknowledgements, we would see four packets per typed character. \\
+Here's an example from our trace file, from traces/5.B.pcap.
+
+\begin{lstlisting}
+Frame 29: 67 bytes on wire (536 bits), 67 bytes captured (536 bits)
+Ethernet II, Src: IntelCor_39:cc:79 (68:05:ca:39:cc:79), Dst: IntelCor_39:e1:36 (68:05:ca:39:e1:36)
+Internet Protocol Version 4, Src: 10.0.5.11 (10.0.5.11), Dst: 10.0.5.22 (10.0.5.22)
+Transmission Control Protocol, Src Port: 32872 (32872), Dst Port: 23 (23), Seq: 3586174827, Ack: 679939142, Len: 1
+Telnet
+    Data: t
+Frame 30: 68 bytes on wire (544 bits), 68 bytes captured (544 bits)
+Ethernet II, Src: IntelCor_39:e1:36 (68:05:ca:39:e1:36), Dst: IntelCor_39:cc:79 (68:05:ca:39:cc:79)
+Internet Protocol Version 4, Src: 10.0.5.22 (10.0.5.22), Dst: 10.0.5.11 (10.0.5.11)
+Transmission Control Protocol, Src Port: 23 (23), Dst Port: 32872 (32872), Seq: 679939142, Ack: 3586174828, Len: 2
+Telnet
+    Data: 
+Frame 31: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: IntelCor_39:cc:79 (68:05:ca:39:cc:79), Dst: IntelCor_39:e1:36 (68:05:ca:39:e1:36)
+Internet Protocol Version 4, Src: 10.0.5.11 (10.0.5.11), Dst: 10.0.5.22 (10.0.5.22)
+Transmission Control Protocol, Src Port: 32872 (32872), Dst Port: 23 (23), Seq: 3586174828, Ack: 679939144, Len: 0
+\end{lstlisting}

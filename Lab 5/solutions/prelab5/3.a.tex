@@ -1,1 +1,2 @@
-This is stored in the Maximum Segment Size parameter (MSS) he default TCP MSS is 536 bytes. Where a host wishes to set the MSS to another value, MSS is specified as a TCP option, in the first or second packet of the TCP handshake, depending on which side wants to make the change.
+This is stored in the Maximum Segment Size parameter (MSS) he default TCP MSS is 536 bytes. Where a host wishes to set the MSS to another value, MSS is specified as a TCP option, in the first or second packet of the TCP handshake, depending on which side wants to make the change. \\
+The maximum transmission unit (MTU) at the host is also brought into consideration: TCP will choose its MSS such that the packet size won't exceed the host's MTU, in a measure to avoid fragmentation.

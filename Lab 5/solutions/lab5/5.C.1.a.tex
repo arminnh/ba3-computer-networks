@@ -1,1 +1,26 @@
-We still observer 3 packets per keystroke. When we type characters more quickly, some are combined in a single packet.
+We still observer 3 packets per keystroke. When we type characters more quickly, some are combined in a single packet, and also some acknowledgements for the server are piggybacked onto the client's packets. Here's an example of a packet (found in traces/5.C.pcap) where two characters were combined into a single packet and which also piggybacked an acknowledgement for the server.
+
+\begin{lstlisting}
+Frame 225: 68 bytes on wire (544 bits), 68 bytes captured (544 bits)
+Ethernet II, Src: IntelCor_36:33:a0 (68:05:ca:36:33:a0), Dst: Cisco_ef:eb:24 (00:0d:bc:ef:eb:24)
+Internet Protocol Version 4, Src: 10.0.1.11 (10.0.1.11), Dst: 10.0.2.22 (10.0.2.22)
+Transmission Control Protocol, Src Port: 51889 (51889), Dst Port: 23 (23), Seq: 1236438828, Ack: 1914573200, Len: 2
+    Source Port: 51889 (51889)
+    Destination Port: 23 (23)
+    [Stream index: 0]
+    [TCP Segment Len: 2]
+    Sequence number: 1236438828
+    [Next sequence number: 1236438830]
+    Acknowledgment number: 1914573200
+    Header Length: 32 bytes
+    .... 0000 0001 1000 = Flags: 0x018 (PSH, ACK)
+    Window size value: 237
+    [Calculated window size: 30336]
+    [Window size scaling factor: 128]
+    Checksum: 0x1749 [validation disabled]
+    Urgent pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [SEQ/ACK analysis]
+Telnet
+    Data: kl
+\end{lstlisting}
