@@ -1,2 +1,38 @@
-In 4.A.PC1.pcap, the first packet that contains data is packet 4, a TELNET packet.
-While it is part of the TELNET-'handshake', it can be counted as a data packet, TCP-wise.\\ Its sequence number is 1.
+Packet no. 4, the first packet after the three-way handshake, contains Telnet application data. The sequence number of the first byte from client to server is 2495102104, which is the same sequence number PC1 used in the final message of the three-way handshake. The relative sequence number is 1.
+
+\begin{lstlisting}
+Frame 4: 93 bytes on wire (744 bits), 93 bytes captured (744 bits)
+Ethernet II, Src: IntelCor_1a:80:15 (68:05:ca:1a:80:15), Dst: IntelCor_1a:7c:75 (68:05:ca:1a:7c:75)
+Internet Protocol Version 4, Src: 10.0.5.11 (10.0.5.11), Dst: 10.0.5.22 (10.0.5.22)
+Transmission Control Protocol, Src Port: 48613 (48613), Dst Port: 23 (23), Seq: 2495102104, Ack: 3213249775, Len: 27
+    Source Port: 48613 (48613)
+    Destination Port: 23 (23)
+    [Stream index: 0]
+    [TCP Segment Len: 27]
+    Sequence number: 2495102104
+    [Next sequence number: 2495102131]
+    Acknowledgment number: 3213249775
+    Header Length: 32 bytes
+    .... 0000 0001 1000 = Flags: 0x018 (PSH, ACK)
+    Window size value: 229
+    [Calculated window size: 29312]
+    [Window size scaling factor: 128]
+    Checksum: 0x1e62 [validation disabled]
+    Urgent pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+        No-Operation (NOP)
+        No-Operation (NOP)
+        Timestamps: TSval 4215509, TSecr 4214383
+    [SEQ/ACK analysis]
+Telnet
+    Do Suppress Go Ahead
+    Will Terminal Type
+    Will Negotiate About Window Size
+    Will Terminal Speed
+    Will Remote Flow Control
+    Will Linemode
+    Will New Environment Option
+    Do Status
+    Will X Display Location
+\end{lstlisting}
+

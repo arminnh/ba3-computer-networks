@@ -1,4 +1,81 @@
-The client sents 29200 as window size.\\
-The server responds with 28960 as window size.\\
-After this, the data is sent with a window size fluctuating between 227 and 229, with a scaling factor of 128, so respectively 29056 and 29312.\\
-This window scale is also agreed upon in the handshake.\\
+In the first two packets of the three-way handshake, the window sizes are rather large: 29200 for PC1 and 28960 for PC2. After this, the data is sent with a window size fluctuating between 227 and 229, with a scaling factor of 128, so respectively 29056 and 29312. \\
+This window scale is also agreed upon in the handshake.
+
+\begin{lstlisting}
+Frame 1: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: IntelCor_1a:80:15 (68:05:ca:1a:80:15), Dst: IntelCor_1a:7c:75 (68:05:ca:1a:7c:75)
+Internet Protocol Version 4, Src: 10.0.5.11 (10.0.5.11), Dst: 10.0.5.22 (10.0.5.22)
+Transmission Control Protocol, Src Port: 48613 (48613), Dst Port: 23 (23), Seq: 2495102103, Len: 0
+    Source Port: 48613 (48613)
+    Destination Port: 23 (23)
+    [Stream index: 0]
+    [TCP Segment Len: 0]
+    Sequence number: 2495102103
+    Acknowledgment number: 0
+    Header Length: 40 bytes
+    .... 0000 0000 0010 = Flags: 0x002 (SYN)
+    Window size value: 29200
+    [Calculated window size: 29200]
+    Checksum: 0x1e4f [validation disabled]
+    Urgent pointer: 0
+    Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+Frame 2: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: IntelCor_1a:7c:75 (68:05:ca:1a:7c:75), Dst: IntelCor_1a:80:15 (68:05:ca:1a:80:15)
+Internet Protocol Version 4, Src: 10.0.5.22 (10.0.5.22), Dst: 10.0.5.11 (10.0.5.11)
+Transmission Control Protocol, Src Port: 23 (23), Dst Port: 48613 (48613), Seq: 3213249774, Ack: 2495102104, Len: 0
+    Source Port: 23 (23)
+    Destination Port: 48613 (48613)
+    [Stream index: 0]
+    [TCP Segment Len: 0]
+    Sequence number: 3213249774
+    Acknowledgment number: 2495102104
+    Header Length: 40 bytes
+    .... 0000 0001 0010 = Flags: 0x012 (SYN, ACK)
+    Window size value: 28960
+    [Calculated window size: 28960]
+    Checksum: 0x7b28 [validation disabled]
+    Urgent pointer: 0
+    Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+    [SEQ/ACK analysis]
+Frame 3: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: IntelCor_1a:80:15 (68:05:ca:1a:80:15), Dst: IntelCor_1a:7c:75 (68:05:ca:1a:7c:75)
+Internet Protocol Version 4, Src: 10.0.5.11 (10.0.5.11), Dst: 10.0.5.22 (10.0.5.22)
+Transmission Control Protocol, Src Port: 48613 (48613), Dst Port: 23 (23), Seq: 2495102104, Ack: 3213249775, Len: 0
+    Source Port: 48613 (48613)
+    Destination Port: 23 (23)
+    [Stream index: 0]
+    [TCP Segment Len: 0]
+    Sequence number: 2495102104
+    Acknowledgment number: 3213249775
+    Header Length: 32 bytes
+    .... 0000 0001 0000 = Flags: 0x010 (ACK)
+    Window size value: 229
+    [Calculated window size: 29312]
+    [Window size scaling factor: 128]
+    Checksum: 0x1e47 [validation disabled]
+    Urgent pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [SEQ/ACK analysis]
+Frame 4: 93 bytes on wire (744 bits), 93 bytes captured (744 bits)
+Ethernet II, Src: IntelCor_1a:80:15 (68:05:ca:1a:80:15), Dst: IntelCor_1a:7c:75 (68:05:ca:1a:7c:75)
+Internet Protocol Version 4, Src: 10.0.5.11 (10.0.5.11), Dst: 10.0.5.22 (10.0.5.22)
+Transmission Control Protocol, Src Port: 48613 (48613), Dst Port: 23 (23), Seq: 2495102104, Ack: 3213249775, Len: 27
+    Source Port: 48613 (48613)
+    Destination Port: 23 (23)
+    [Stream index: 0]
+    [TCP Segment Len: 27]
+    Sequence number: 2495102104
+    [Next sequence number: 2495102131]
+    Acknowledgment number: 3213249775
+    Header Length: 32 bytes
+    .... 0000 0001 1000 = Flags: 0x018 (PSH, ACK)
+    Window size value: 229
+    [Calculated window size: 29312]
+    [Window size scaling factor: 128]
+    Checksum: 0x1e62 [validation disabled]
+    Urgent pointer: 0
+    Options: (12 bytes), No-Operation (NOP), No-Operation (NOP), Timestamps
+    [SEQ/ACK analysis]
+Telnet
+\end{lstlisting}
+

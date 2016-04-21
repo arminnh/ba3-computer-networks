@@ -1,4 +1,8 @@
-This is a client-initiated closing, so:\\
-Client sends with FIN \& ACK flags,\\
-Server responds with FIN \& ACK flags.\\ 
-and at last, the client acknowledges with an ACK packet.
+
+In ``Lab 5/traces/4.A.PC1.pcap'' the packets that are involved in closing the TCP connection are packets with no. 76, 77, 78. They both have the FIN flag set. When a sender sets the FIN flag, it indicates that they won't send any more data. PC1 (client) sends one last ACK after sending a packet with FIN set, acknowledging the receipt of PC2's FIN message.
+
+\begin{lstlisting}
+76	76.193351	10.0.5.11	10.0.5.22	TCP	66	48613→23 [FIN, ACK] Seq=2495102305 Ack=3213250523 Win=30336 Len=0 TSval=4234558 TSecr=4216062
+77	76.194236	10.0.5.22	10.0.5.11	TCP	66	23→48613 [FIN, ACK] Seq=3213250523 Ack=2495102306 Win=29056 Len=0 TSval=4233431 TSecr=4234558
+78	76.194264	10.0.5.11	10.0.5.22	TCP	66	48613→23 [ACK] Seq=2495102306 Ack=3213250524 Win=30336 Len=0 TSval=4234558 TSecr=4233431
+\end{lstlisting}

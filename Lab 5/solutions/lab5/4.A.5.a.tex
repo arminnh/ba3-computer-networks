@@ -1,1 +1,7 @@
-The first packet is sent by the server, then the client replies and the server acknowledges.
+The first packet with the FIN flag set is from PC2 (server), contrary to when the client closes the connection, then the client replies and the server acknowledges.
+
+\begin{lstlisting}
+348	209.621366	10.0.5.22	10.0.5.11	TCP	66	23→48615 [FIN, ACK] Seq=419429485 Ack=3956140201 Win=29056 Len=0 TSval=4266788 TSecr=4252924
+349	209.621460	10.0.5.11	10.0.5.22	TCP	66	48615→23 [FIN, ACK] Seq=3956140201 Ack=419429486 Win=29312 Len=0 TSval=4267915 TSecr=4266788
+350	209.621939	10.0.5.22	10.0.5.11	TCP	66	23→48615 [ACK] Seq=419429486 Ack=3956140202 Win=29056 Len=0 TSval=4266788 TSecr=4267915
+\end{lstlisting}

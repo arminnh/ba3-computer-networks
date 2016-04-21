@@ -1,1 +1,64 @@
-1460 bytes, sent by the client and approved by te server.
+PC1's initial packet includes a MSS of 1460, as does PC2's initial packet. They happened to both send the same values, although both directions could have different values for MSS. Only the packets where SYN is set include values for MSS.
+
+\begin{lstlisting}
+Frame 1: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: IntelCor_1a:80:15 (68:05:ca:1a:80:15), Dst: IntelCor_1a:7c:75 (68:05:ca:1a:7c:75)
+Internet Protocol Version 4, Src: 10.0.5.11 (10.0.5.11), Dst: 10.0.5.22 (10.0.5.22)
+Transmission Control Protocol, Src Port: 48613 (48613), Dst Port: 23 (23), Seq: 2495102103, Len: 0
+    Source Port: 48613 (48613)
+    Destination Port: 23 (23)
+    [Stream index: 0]
+    [TCP Segment Len: 0]
+    Sequence number: 2495102103
+    Acknowledgment number: 0
+    Header Length: 40 bytes
+    .... 0000 0000 0010 = Flags: 0x002 (SYN)
+    Window size value: 29200
+    [Calculated window size: 29200]
+    Checksum: 0x1e4f [validation disabled]
+    Urgent pointer: 0
+    Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+        Maximum segment size: 1460 bytes
+            Kind: Maximum Segment Size (2)
+            Length: 4
+            MSS Value: 1460
+        TCP SACK Permitted Option: True
+        Timestamps: TSval 4215509, TSecr 0
+        No-Operation (NOP)
+        Window scale: 7 (multiply by 128)
+            Kind: Window Scale (3)
+            Length: 3
+            Shift count: 7
+            [Multiplier: 128]
+Frame 2: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: IntelCor_1a:7c:75 (68:05:ca:1a:7c:75), Dst: IntelCor_1a:80:15 (68:05:ca:1a:80:15)
+Internet Protocol Version 4, Src: 10.0.5.22 (10.0.5.22), Dst: 10.0.5.11 (10.0.5.11)
+Transmission Control Protocol, Src Port: 23 (23), Dst Port: 48613 (48613), Seq: 3213249774, Ack: 2495102104, Len: 0
+    Source Port: 23 (23)
+    Destination Port: 48613 (48613)
+    [Stream index: 0]
+    [TCP Segment Len: 0]
+    Sequence number: 3213249774
+    Acknowledgment number: 2495102104
+    Header Length: 40 bytes
+    .... 0000 0001 0010 = Flags: 0x012 (SYN, ACK)
+    Window size value: 28960
+    [Calculated window size: 28960]
+    Checksum: 0x7b28 [validation disabled]
+    Urgent pointer: 0
+    Options: (20 bytes), Maximum segment size, SACK permitted, Timestamps, No-Operation (NOP), Window scale
+        Maximum segment size: 1460 bytes
+            Kind: Maximum Segment Size (2)
+            Length: 4
+            MSS Value: 1460
+        TCP SACK Permitted Option: True
+        Timestamps: TSval 4214383, TSecr 4215509
+        No-Operation (NOP)
+        Window scale: 7 (multiply by 128)
+            Kind: Window Scale (3)
+            Length: 3
+            Shift count: 7
+            [Multiplier: 128]
+    [SEQ/ACK analysis]
+\end{lstlisting}
+

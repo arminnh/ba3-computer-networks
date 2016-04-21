@@ -1,1 +1,8 @@
-In our setup, this was done in less than a millisecond, however this largely depends on the network conditions.
+If we consider the connection to be ``open'' as soon as the first packet with application data is sent, in this case it took 0.843 ms. However, in practice this largely depends on the network conditions.
+
+\begin{lstlisting}
+1	0.000000	10.0.5.11	10.0.5.22	TCP	74	48613→23 [SYN] Seq=2495102103 Win=29200 Len=0 MSS=1460 SACK_PERM=1 TSval=4215509 TSecr=0 WS=128
+2	0.000621	10.0.5.22	10.0.5.11	TCP	74	23→48613 [SYN, ACK] Seq=3213249774 Ack=2495102104 Win=28960 Len=0 MSS=1460 SACK_PERM=1 TSval=4214383 TSecr=4215509 WS=128
+3	0.000660	10.0.5.11	10.0.5.22	TCP	66	48613→23 [ACK] Seq=2495102104 Ack=3213249775 Win=29312 Len=0 TSval=4215509 TSecr=4214383
+4	0.000843	10.0.5.11	10.0.5.22	TELNET	93	Telnet Data ...
+\end{lstlisting}
