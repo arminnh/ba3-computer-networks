@@ -89,5 +89,12 @@ Open Shortest Path First
 
 The packet consists of an ``OSPF Header'' part and an ``OSPF LS Update'' part. The actual link state advertisements are in the ``OSPF LS Update'' part.
 
-When this packet was sent, the LSA was two seconds old. It had sequence number 0x80000009 (we explained the function of sequence numbers before).
-We have an LSA of type 1, which is ``Router-LSA'', which is an LSA type for routers to annouce their own presence in the  same area. The LSA in this packet originated from 10.0.7.8, which is vlan1 of Router4, and called the advertising router. The Link State ID (same value as dedicated router in case of a Router-LSA) describes the portion of the internet environment thas is being described by the advertisement. The router advertises only 1 link, which we don't fully understand: Router4 is connected to 2 links. The link type is Transit. The link ID is 10.0.5.6, which is Router3's FastEthernet0/0 address.  This identifies the object that this router link connects to, and is the key for looking up the advertisement in the link state database. The ``data'' field contains 10.0.5.8, which is, in the case of a Transit link, the router's associated IP interface address.
+When this packet was sent, the LSA was two seconds old. It had sequence number 0x80000009 (we explained the function of sequence numbers before). \\
+We have an LSA of type 1, which is ``Router-LSA'', which is an LSA type for routers to annouce their own presence in the
+same area. The LSA in this packet originated from 10.0.7.8, which is vlan1 of Router4, and called the advertising router. \\
+The Link State ID (same value as dedicated router in case of a Router-LSA) describes the portion of the internet environment
+thas is being described by the advertisement. The router advertises only 1 link, which we don't fully understand:
+Router4 is connected to 2 links. \\
+The link type is Transit. The link ID is 10.0.5.6, which is Router3's FastEthernet0/0 address.
+This identifies the object that this router link connects to, and is the key for looking up the advertisement in the link state database.
+The ``data'' field contains 10.0.5.8, which is, in the case of a Transit link, the router's associated IP interface address.
