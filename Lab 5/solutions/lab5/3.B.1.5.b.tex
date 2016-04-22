@@ -1,8 +1,12 @@
 The ICMP error messages are used for Path MTU Discovery to reduce the TCP transmission's MSS value and send smaller packets. \\
 
-We see this in packets 45, 47 and 48 in the file ``Lab 5/traces/3.B.PC1.pcap'': \\
+We see this in packets 45, 47 and 48 in the file ``Lab 5/traces/3.B.PC1.pcap'':
 \begin{itemize}
-    \item packet 45 is a TCP packet sent by PC1 with a payload of 1024 bytes, which exceeds PC3's MTU. \\
-    \item PC1 then receives packet 47 from PC3, which is the ICMP error message. \\
+    \item packet 45 is a TCP packet sent by PC1 with a payload of 1024 bytes, which exceeds PC3's MTU.
+    \item PC1 then receives packet 47 from PC3, which is the ICMP error message.
     \item packet 48 is a TCP packet sent by PC1 with a smaller payload of 500 bytes.
 \end{itemize}
+
+So, we see that ICMP error messages are used for Path MTU Discovery. The size of the packets has been decreased.
+However, the decreased size is still too big. We see that the payload is now 500 bytes, but the total packet size is what should be 500 bytes.
+We're not sure what's going wrong here, but suspect it was caused our nttcp configuration.
