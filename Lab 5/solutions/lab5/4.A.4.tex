@@ -1,5 +1,8 @@
 
-In ``Lab 5/traces/4.A.PC1.pcap'' the packets that are involved in closing the TCP connection are packets with no. 76, 77, 78. They both have the FIN flag set. When a sender sets the FIN flag, it indicates that they won't send any more data. PC1 (client) sends one last ACK after sending a packet with FIN set, acknowledging the receipt of PC2's FIN message.
+In ``Lab 5/traces/4.A.PC1.pcap'' the packets that are involved in closing the TCP connection are packets with no. 76, 77, 78.
+They both have the FIN flag set. \\
+When a sender sets the FIN flag, it indicates that they won't send any more data.
+PC1 (client) sends one last ACK after sending a packet with FIN set, acknowledging the receipt of PC2's FIN message.
 
 \begin{lstlisting}
 76	76.193351	10.0.5.11	10.0.5.22	TCP	66	48613→23 [FIN, ACK] Seq=2495102305 Ack=3213250523 Win=30336 Len=0 TSval=4234558 TSecr=4216062
