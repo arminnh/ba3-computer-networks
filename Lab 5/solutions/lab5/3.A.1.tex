@@ -1,6 +1,8 @@
 Taken from ``Lab 5/traces/3.A.PC1.pcap'':
 
-the complete datagram before fragmentation:
+As the packets are fragmented at the host, there is no ``before'' and ``after'' fragmentation.
+
+Here's an example of a datagram that was fragmented into 2 fragments.
 \begin{lstlisting}
 No.     Time        Source                Destination           Protocol Length Info
      72 8.015696    10.0.1.11             10.0.2.22             UDP      35     Source port: 39068  Destination port: 5038
@@ -75,8 +77,6 @@ Data (1473 bytes)
     Data: 1472baa5935b4c7b3df37df0ae953907c78076113b82f6e7...
     [Length: 1473]
 \end{lstlisting}
-
-all fragments after fragmentation:
 \begin{lstlisting}
 No.     Time        Source                Destination           Protocol Length Info
      71 8.015694    10.0.1.11             10.0.2.22             IPv4     1514   Fragmented IP protocol (proto=UDP 17, off=0, ID=07ef) [Reassembled in #72]
