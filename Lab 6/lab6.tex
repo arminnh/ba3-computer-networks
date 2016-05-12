@@ -1,6 +1,6 @@
 %!TEX root = labo.tex
 
-\setcounter {chapter} {5} 
+\setcounter {chapter} {5}
 
 \chapter{LAN switching}
 
@@ -32,10 +32,10 @@ The configuration of the equipment in Lab 6 is changed several times during the 
 
 \begin{table}[h!t]
 \centering
-	\begin{tabular}{| c | c | c |}	
+	\begin{tabular}{| c | c | c |}
 		\hline
 		\textbf{Linux PC} & \textbf{eth0} & \textbf{eth1} \\ \hline
-		PC1 & 10.0.1.11/24 & 10.0.1.12/24 \\ 
+		PC1 & 10.0.1.11/24 & 10.0.1.12/24 \\
 		PC2 & 10.0.2.21/24 & 10.0.1.22/24 \\
 		PC3 & 10.0.3.31/24 & 10.0.1.32/24 \\
 		PC4 & 10.0.4.41/24 & 10.0.1.42/24 \\ \hline
@@ -53,7 +53,7 @@ The network configuration for this part is shown in Figure \ref{fig:lab6-network
 
 \begin{figure}[h!t]
 	\centering
-	\includegraphics[width=\linewidth]{graphics/lab6-network1.pdf}	
+	\includegraphics[width=\linewidth]{graphics/lab6-network1.pdf}
 	\caption{Network Topology for Part 1.}
 	\label{fig:lab6-network1}
 \end{figure}
@@ -65,13 +65,13 @@ The network configuration for this part is shown in Figure \ref{fig:lab6-network
 	\item Since, throughout Lab 6, you frequently work with MAC addresses, you should record the MAC addresses of the Linux PCs. Log in to each of the PCs and obtain the MAC addresses of both Ethernet interfaces with the command \cmd{ifconfig -a}. Enter the MAC addresses in Table \ref{tab:lab6-macs-pcs}. (In Part 2, you will repeat the same exercise on the Cisco routers.)
 		\begin{table}[h!t]
 			\centering
-			\begin{tabular}{| c | c | c |}	
+			\begin{tabular}{| c | c | c |}
 				\hline
 				\textbf{Linux PC} & \textbf{MAC address of eth0} & \textbf{MAC address of eth1} \\ \hline
-				PC1 &  &  \\ 
-				PC2 &  &  \\
-				PC3 &  &  \\
-				PC4 &  &  \\ \hline
+				PC1 & 68:05:ca:36:33:a0 & 68:05:ca:39:cc:79 \\
+				PC2 & 68:05:ca:36:31:f0 & 68:05:ca:39:e1:36 \\
+				PC3 & 68:05:ca:36:39:c7 & 68:05:ca:36:51:3f  \\
+				PC4 & 68:05:ca:39:e1:2f & 68:05:ca:39:e1:32 \\ \hline
 			\end{tabular}
 			\caption{MAC addresses of the linux PCs}
 			\label{tab:lab6-macs-pcs}
@@ -83,7 +83,7 @@ In this exercise, you configure PC2 as a bridge that forwards packets between th
 \begin{enumerate}
 	\item Creating a bridge with \cmd{brctl}: It is possible to configure multiple independently operating bridges on the same PC. Each bridge is assigned a name and is associated with a set of interfaces. Here, you configure one bridge on PC2 and assign the bridge the name Bridge1.
 		\begin{cmdblock}
-	brctl addbr Bridge1	
+	brctl addbr Bridge1
 		\end{cmdblock}
 		Check if the bridge has been created by typing:
 		\begin{cmdblock}
@@ -151,7 +151,7 @@ When the bridge configuration of PC2 is complete, PC2 forwards packets between P
 \end{questions}
 
 \begin{enumerate}[resume]
-	\item Run \cmd{traceroute} from PC1 to PC3 and save the output 
+	\item Run \cmd{traceroute} from PC1 to PC3 and save the output
 		\begin{cmdblock}
 	PC1% traceroute 10.0.1.31
 		\end{cmdblock}
@@ -190,7 +190,7 @@ This exercise familiarizes you with a few tasks related to running \cmd{brctl} o
 	ifconfig Bridge1 down
 	brctl delbr Bridge1
 		\end{cmdblock}
-		You can verify that the bridge is disabled as follows: Verify that PC2 is operating as a normal host. To do this, issue a ping command to interfaces \iface{eth0} and \iface{eth1} of PC2 from PC1 and PC3. 
+		You can verify that the bridge is disabled as follows: Verify that PC2 is operating as a normal host. To do this, issue a ping command to interfaces \iface{eth0} and \iface{eth1} of PC2 from PC1 and PC3.
 		\begin{cmdblock}
 	PC1% ping -c 1 10.0.1.21
 	PC3% ping -c 1 10.0.1.22
@@ -210,7 +210,7 @@ Next you learn how to configure a Cisco Router as a bridge. The topology for thi
 
 \begin{figure}[h!t]
 	\centering
-	\includegraphics[width=\linewidth]{graphics/lab6-network2-updated.pdf}	
+	\includegraphics[width=\linewidth]{graphics/lab6-network2-updated.pdf}
 	\caption{Network Topology for Parts 2 and 3-b.}
 	\label{fig:lab6-network2}
 \end{figure}
@@ -224,13 +224,13 @@ After the network is configured, as in Exercise 1-a above for the Linux PCs, you
 	\item On each router, type \cmd{enable} and then use the command \cmd{show interfaces} to display the MAC addresses of the Ethernet interfaces. Record the MAC addresses in Table \ref{tab:lab6-macs-routers}.
 		\begin{table}[h!t]
 			\centering
-			\begin{tabular}{| c | c | c |}	
+			\begin{tabular}{| c | c | c |}
 				\hline
 				\textbf{Linux PC} & \textbf{MAC address of FastEthernet0/0} & \textbf{MAC address of interface vlan1} \\ \hline
-				Router1 &  &  \\ 
-				Router2 &  &  \\
-				Router3 &  &  \\
-				Router4 &  &  \\ \hline
+				Router1 & 000d.6517.0129 & 0012.00d4.bf58 \\
+				Router2 & 000d.bcef.b1a3 & 0012.0120.245c \\
+				Router3 & 000d.bcef.eb24 & 0012.00d4.bdb0 \\
+				Router4 & 000d.bcef.b948 & 0012.00d4.bf6c \\ \hline
 			\end{tabular}
 			\caption{MAC addresses of the linux PCs}
 			\label{tab:lab6-macs-routers}
@@ -292,21 +292,21 @@ The second command assigns the priority 128 to bridge group 1. The priority of a
 		\begin{cmdblock}
 	Router1> enable Password: <enable secret>
 	Router1# configure terminal
-	Router1(config)# no ip routing 
-	Router1(config)# bridge 1 protocol ieee 
-	Router1(config)# bridge 1 priority 128 
-	Router1(config)# interface FastEthernet0/0 
+	Router1(config)# no ip routing
+	Router1(config)# bridge 1 protocol ieee
+	Router1(config)# bridge 1 priority 128
+	Router1(config)# interface FastEthernet0/0
 	Router1(config-if)# bridge-group 1
-	Router1(config-if)# bridge-group 1 spanning-disabled 
+	Router1(config-if)# bridge-group 1 spanning-disabled
 	Router1(config-if)# no shutdown
-	Router1(config-if)# interface FastEthernet0/1 
+	Router1(config-if)# interface FastEthernet0/1
 	Router1(config-if)# no shutdown
-	Router1(config-if)# interface vlan1 
-	Router1(config-if)# bridge-group 1 
-	Router1(config-if)# bridge-group 1 spanning-disabled 
+	Router1(config-if)# interface vlan1
+	Router1(config-if)# bridge-group 1
+	Router1(config-if)# bridge-group 1 spanning-disabled
 	Router1(config-if)# no shutdown
-	Router1(config-if)# end 
-	Router1# clear bridge 
+	Router1(config-if)# end
+	Router1# clear bridge
 	Router1# clear arp-cache
 		\end{cmdblock}
 		The commands disable IP forwarding and set up Router1 as a bridge that runs with priority 128. Both Ethernet interfaces are assigned to the bridge, but the spanning tree protocol is disabled.
@@ -316,7 +316,7 @@ The second command assigns the priority 128 to bridge group 1. The priority of a
 		\begin{cmdblock}
 	PC1% ping -c 1 10.0.1.31
 		\end{cmdblock}
-	\item Run \cmd{traceroute} from PC1 to PC3 and save the output. 
+	\item Run \cmd{traceroute} from PC1 to PC3 and save the output.
 		\begin{cmdblock}
 	PC1% traceroute 10.0.1.31
 		\end{cmdblock}
@@ -345,7 +345,7 @@ Try to generate collisions by flooding an Ethernet hub with traffic. The network
 
 \begin{figure}[h!t]
 	\centering
-	\includegraphics[width=\linewidth]{graphics/lab6-network3.pdf}	
+	\includegraphics[width=\linewidth]{graphics/lab6-network3.pdf}
 	\caption{Network Topology for Part 3}
 	\label{fig:lab6-network3}
 \end{figure}
@@ -372,7 +372,7 @@ Try to generate collisions by flooding an Ethernet hub with traffic. The network
 
 \begin{questions}
 	\q{3.A}{Calculate the number of new collision as seen by PC1 and PC3, in the above exercise. Briefly explain what causes the collisions.}
-\end{questions}	
+\end{questions}
 
 \subsubsection{Exercise 3-b. No collisions when using an Ethernet switch}
 Repeat the steps of the previous exercise, but place an Ethernet switch (Router1, which has been configured as a bridge), between the two Ethernet hubs.
@@ -385,11 +385,11 @@ Repeat the steps of the previous exercise, but place an Ethernet switch (Router1
 	PC3% ifconfig -a
 		\end{cmdblock}
 		Save the output.
-	\item Flood the network with traffic by generating a large number of ICMP Echo Request and Reply packets between PC1 to PC2, by typing 
+	\item Flood the network with traffic by generating a large number of ICMP Echo Request and Reply packets between PC1 to PC2, by typing
 		\begin{cmdblock}
 	PC1% ping -f 10.0.1.21
 		\end{cmdblock}
-	\item Now issue 100 ICMP Echo Request packets from PC3 to PC4: 
+	\item Now issue 100 ICMP Echo Request packets from PC3 to PC4:
 		\begin{cmdblock}
 	PC3% ping -c 100 10.0.1.41
 		\end{cmdblock}
@@ -400,7 +400,7 @@ Repeat the steps of the previous exercise, but place an Ethernet switch (Router1
 \begin{questions}
 	\q{3.B}{Use the \cmd{ifconfig -a} output to calculate the new collisions seen at the interfaces of PC1 and PC3. Explain the differences between the outcomes in Exercise 3-a and Exercise 3-b.}
 \end{questions}
-	
+
 \newpage
 \subsection{Learning Bridges}
 
@@ -414,7 +414,7 @@ Here you investigate the learning algorithm of bridges. The network configuratio
 
 \begin{figure}[h!t]
 	\centering
-	\includegraphics[width=\linewidth]{graphics/lab6-network4-updated.pdf}	
+	\includegraphics[width=\linewidth]{graphics/lab6-network4-updated.pdf}
 	\caption{Network Topology for Part 4}
 	\label{fig:lab6-network4}
 \end{figure}
@@ -434,9 +434,9 @@ In this exercise you study how bridges set up their MAC forwarding tables from t
 	\item Clear the ARP cache on PC1, PC2, and PC3.
 	\item Now, issue a set of \cmd{ping} commands. After each command, save the MAC forwarding table on all bridges with the command show bridge, and observe how far the ICMP Echo Request and Reply packets travel.
 		\begin{cmdblock}
-	PC1% ping -c 1 10.0.1.21 
-	PC2% ping -c 1 10.0.1.11 
-	PC2% ping -c 1 10.0.1.41 
+	PC1% ping -c 1 10.0.1.21
+	PC2% ping -c 1 10.0.1.11
+	PC2% ping -c 1 10.0.1.41
 	PC3% ping -c 1 10.0.1.21
 		\end{cmdblock}
 	\item Stop the traffic capture on the PCs, and save the ethereal output.
@@ -454,7 +454,7 @@ Learning bridges adapt their MAC forwarding tables automatically when the locati
 \begin{enumerate}
 	\item Continue with the configuration of the previous exercise. First, create or refresh entries in the MAC forwarding table at the bridges by issuing the following commands from PC1:
 		\begin{cmdblock}
-	PC1% ping -c 3 10.0.1.31 
+	PC1% ping -c 3 10.0.1.31
 	PC1% ping -c 3 10.0.1.41
 		\end{cmdblock}
 	\item Now, connect PC2 to the same hub that PC4 is connected to.
@@ -465,7 +465,7 @@ Learning bridges adapt their MAC forwarding tables automatically when the locati
 		Since Router2 does not know that PC2 has moved, it does not forward the ICMP Echo Request packet, and packet does not reach PC2. As a result, the ARP requests and the ping are unsuccessful. Eventually, since the MAC forwarding entry for PC2 is not refreshed at Router2 and Router3, the entry is deleted. When the entry is removed, the next ICMP Echo Request from PC1 is flooded on all ports, thus reaching PC2. When PC2 responds, all bridges update their MAC forwarding table using the source MAC address of PC2.
 		Record the amount of time that the ping from PC1 to PC2 is not successful after PC2 has been moved to a different hub.
 	\item Now connect PC3 to the same hub as PC4.
-	\item Issue a \cmd{ping} command from PC1 to PC3 that continuously sends ICMP Echo Request packets to PC3: 
+	\item Issue a \cmd{ping} command from PC1 to PC3 that continuously sends ICMP Echo Request packets to PC3:
 		\begin{cmdblock}
 	PC1% ping 10.0.1.31
 		\end{cmdblock}

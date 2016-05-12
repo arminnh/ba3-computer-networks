@@ -1,0 +1,59 @@
+No, the source and destination MAC/IP addresses do not change when a packet traverses a bridge.
+The bridge forwards packets without changing these addresses. \\
+
+An example:
+
+\textbf{PC1}
+\begin{lstlisting}
+No.     Time        Source                Destination           Protocol Length Info
+      7 79.726862   10.0.1.11             10.0.1.31             ICMP     98     Echo (ping) request  id=0x0c87, seq=1/256, ttl=64 (reply in 8)
+
+Frame 7: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: IntelCor_36:33:a0 (68:05:ca:36:33:a0), Dst: IntelCor_36:39:c7 (68:05:ca:36:39:c7)
+Internet Protocol Version 4, Src: 10.0.1.11 (10.0.1.11), Dst: 10.0.1.31 (10.0.1.31)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+    Total Length: 84
+    Identification: 0xf239 (62009)
+    Flags: 0x02 (Don't Fragment)
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: ICMP (1)
+    Header checksum: 0x3246 [validation disabled]
+    Source: 10.0.1.11 (10.0.1.11)
+    Destination: 10.0.1.31 (10.0.1.31)
+    [Source GeoIP: Unknown]
+    [Destination GeoIP: Unknown]
+Internet Control Message Protocol
+\end{lstlisting}
+
+\textbf{PC3}
+\begin{lstlisting}
+No.     Time        Source                Destination           Protocol Length Info
+     11 79.727330   10.0.1.11             10.0.1.31             ICMP     98     Echo (ping) request  id=0x0c87, seq=1/256, ttl=64 (reply in 12)
+
+Frame 11: 98 bytes on wire (784 bits), 98 bytes captured (784 bits)
+Ethernet II, Src: IntelCor_36:33:a0 (68:05:ca:36:33:a0), Dst: IntelCor_36:39:c7 (68:05:ca:36:39:c7)
+Internet Protocol Version 4, Src: 10.0.1.11 (10.0.1.11), Dst: 10.0.1.31 (10.0.1.31)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+    Total Length: 84
+    Identification: 0xf239 (62009)
+    Flags: 0x02 (Don't Fragment)
+    Fragment offset: 0
+    Time to live: 64
+    Protocol: ICMP (1)
+    Header checksum: 0x3246 [validation disabled]
+    Source: 10.0.1.11 (10.0.1.11)
+    Destination: 10.0.1.31 (10.0.1.31)
+    [Source GeoIP: Unknown]
+    [Destination GeoIP: Unknown]
+Internet Control Message Protocol
+\end{lstlisting}
+
+We see here that nothing was changed.\\
+
+If PC2 was configured as an IP router,
+then the ethernet address of the packets sent to PC3 would have PC2's ethernet address as source ethernet address.
