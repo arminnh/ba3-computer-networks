@@ -1,2 +1,5 @@
-The switch now knows not to send the PC1->PC2 pings to the other hosts, where the hub also floods those interfaces.//
-This way, some pings of PC3 and PC1 can collide.
+We see no new collisions this time. \\
+This happened because the switch knows where to send the packets to,
+instead of transmitting them to all connected hosts like a hub would do. \\
+The pings from PC1 to PC2 only go to PC2. The pings from PC3 to PC4 only go to PC4.
+No collisions can occur.
