@@ -4,4 +4,8 @@ traceroute to 10.0.1.31 (10.0.1.31), 30 hops max, 60 byte packets
  1  10.0.1.31 (10.0.1.31)  2.567 ms  2.872 ms  2.869 ms
 \end{lstlisting}
 
-PC2 is not visible because this is supposed to be the case for bridges. ** ??? **
+The way traceroute works is by causing a time-to-live timeout at every intermediary IP hop. The
+router where such a timeout happens sends an ICMP error packet back to the originator of the
+packet that timed out. This is how the source knows about the hop. A bridge does not decrease
+the TTL field of a packet, nor does it have an address from which it can send packets (as
+discussed earlier).

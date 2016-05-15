@@ -1,5 +1,4 @@
 We see no new collisions this time. \\
-This happened because the switch knows where to send the packets to,
-instead of transmitting them to all connected hosts like a hub would do. \\
-The pings from PC1 to PC2 only go to PC2. The pings from PC3 to PC4 only go to PC4.
-No collisions can occur.
+A switch is smarter than a hub, in that it stores packets it receives: it needs to analyze
+the packet in order to decide where to forward it. Thus it will never dumbly send data
+received from two different hosts at the same time on the same channel.

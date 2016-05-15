@@ -1,1 +1,60 @@
-** todo **
+We should note that the ``hubs'' that connect the PCs to the routers were actually switches
+instead of hubs when when we did the lab, so they were also learning. \\
+When the ping command from PC1 to PC2 is executed, PC1 sends out an ARP request for PC2's IP
+address. Router1 forwards the ARP request and maps PC1's hardware address to its FastEthernet0/0
+interface. The switch (supposed to be hub) that connects Router1, Router2 and PC2 doesn't know
+PC2 yet, so it forwards the ARP request to both PC2 and Router2. Router2 doesn't know PC2
+either, so it forwards the request as well. The same goes for the switch that connects Router2,
+Router3 and PC3. Indeed: in PC3's trace file we see the ARP request from PC1 asking for PC2's
+hardware address.
+\begin{lstlisting}
+Frame 13: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: IntelCor_36:33:a0 (68:05:ca:36:33:a0), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: IntelCor_36:33:a0 (68:05:ca:36:33:a0)
+    Type: ARP (0x0806)
+    Padding: 000000000000000000000000000000000000
+Address Resolution Protocol (request)
+    Hardware type: Ethernet (1)
+    Protocol type: IP (0x0800)
+    Hardware size: 6
+    Protocol size: 4
+    Opcode: request (1)
+    Sender MAC address: IntelCor_36:33:a0 (68:05:ca:36:33:a0)
+    Sender IP address: 10.0.1.11 (10.0.1.11)
+    Target MAC address: 00:00:00_00:00:00 (00:00:00:00:00:00)
+    Target IP address: 10.0.1.21 (10.0.1.21)
+\end{lstlisting}
+When PC2 responds to PC1's ARP request, Router1, as well as the switches in between, already
+know about PC1, so they only forward the response to the right interfaces. \\
+Upon learning PC2's hardware address, PC1 sends its ping message to PC2, and PC2 responds.
+The ping succeeds. \\
+Five seconds later we see an ARP request from PC2 asking for PC1's hardware address, even though no
+ping message was ready to be sent at that point. We can't quite explain this request, as PC2
+learned PC1's hardware address through PC1's ARP request. Perhaps it's an automatic refresh. \\
+Then, PC2 pings PC1. Again, PC1 and PC2 are already known to all the
+switches in between. Then, PC2 pings PC4. Router2 and Router3, as well as the switches in between,
+don't know PC4 yet, so they all forward the request to all interfaces. Thus, even PC1 will receive
+this request:
+\begin{lstlisting}
+Frame 16: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: IntelCor_36:31:f0 (68:05:ca:36:31:f0), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: IntelCor_36:31:f0 (68:05:ca:36:31:f0)
+    Type: ARP (0x0806)
+    Padding: 000000000000000000000000000000000000
+Address Resolution Protocol (request)
+    Hardware type: Ethernet (1)
+    Protocol type: IP (0x0800)
+    Hardware size: 6
+    Protocol size: 4
+    Opcode: request (1)
+    Sender MAC address: IntelCor_36:31:f0 (68:05:ca:36:31:f0)
+    Sender IP address: 10.0.1.21 (10.0.1.21)
+    Target MAC address: 00:00:00_00:00:00 (00:00:00:00:00:00)
+    Target IP address: 10.0.1.41 (10.0.1.41)
+\end{lstlisting}
+Lastly, PC3 pings PC2. PC2 is already known to all bridges involved, so the ping request is only
+forwarded by Router2. When PC3 sends its ARP request asking for PC2's hardware address (again,
+we don't know why PC3 doesn't just derive this address from PC2's ping packet), all of the bridges
+get to know PC3: we can find PC3's ARP request in the traces of all PCs. 

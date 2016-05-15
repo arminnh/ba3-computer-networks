@@ -1,1 +1,5 @@
-If PC2 was configured as an IP router, it would show up in the traceroute.
+If PC2 was configured as an IP router, it would be an IP hop with its own hardware
+addresses and IP addresses, and it would decrease the TTL of packets. As such, the
+TTL of the packet would be able to exceed at PC2, and PC2 would be able to send an
+ICMP TTL exceeded error message. Upon receiving this error message, PC1 would know
+of PC2's existance, and it would be added as hop on traceroute.

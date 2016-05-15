@@ -1,5 +1,6 @@
 No, the source and destination MAC/IP addresses do not change when a packet traverses a bridge.
-The bridge forwards packets without changing these addresses. \\
+A bridge does not have an address itself; it only forwards packets that are on their way to objects
+that do have an address, such as routers and hosts. \\
 
 An example:
 
@@ -55,5 +56,5 @@ Internet Control Message Protocol
 
 We see here that nothing was changed.\\
 
-If PC2 was configured as an IP router,
-then the ethernet address of the packets sent to PC3 would have PC2's ethernet address as source ethernet address.
+If PC2 was configured as an IP router, then the IP addresses of the packets would remain the same
+(given that no NAT was configured on PC2), but the destination field of the packet traveling towards PC2 would be PC2's hardware address instead of PC3's hardware address, and the forwarded packet would have PC2's hardware address in the source field instead of PC1's hardware address.

@@ -1,2 +1,4 @@
-The ping command no longer works. This happens because the hosts are not on the same subnet anymore. \\
-The bridge is not set up to work between different subnets. ** ???? **
+The ping command no longer works. This happens because the hosts are not on the same subnet anymore.
+Every host/router connected to a bridge on a particular interface is supposed to be on the same IP
+network on that interface. Because PC1 doesn't know about the network PC3 is on, and doesn't have a
+default gateway either, it doesn't know where to send the ping message.
