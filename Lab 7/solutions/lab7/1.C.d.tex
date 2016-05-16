@@ -1,1 +1,4 @@
-It looks at the destination's port number. Each host in the private network is mapped to a port number.
+In case of Telnet, by the destination's port number in the TCP header. For the pings,
+by the value in the Identifier field. When an inside host reaches out to the outside,
+the translator stores these so that when it receives a packet from the outside directed
+to itself, it knows which private destination IP address to translate to.

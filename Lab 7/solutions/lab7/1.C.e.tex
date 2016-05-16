@@ -1,1 +1,8 @@
-** ????????????????????????????????????????????????????????????????? **
+For a packet from the inside destined to the outside, the port number (or other kinds
+of identification, as mentioned, depends on the protocol) is mapped to the private
+address of the host, in order to track the connection. The packet's source IP address
+is then replaced by the router's outside IP address. Because of this, responses from
+the outside will be directed towards the router. \\
+When the router receives a packet from the outside, it looks up the port number or
+ICMP identifier or ... (again, depends on the protocol) and, if found, translates the
+packet's destination IP address field to the corresponding IP address.

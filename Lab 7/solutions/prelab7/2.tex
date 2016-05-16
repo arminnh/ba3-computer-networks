@@ -1,2 +1,9 @@
-The NAT protocol changes the ip addresses when resolving to the host in the local network.
-This way, the exact IP address is not used in the full communication process and the NAT-router intervenes with IP datagrams.
+IP was originally supposed to be an end-to-end protocol, where each IP address uniquely
+identifies a host. Any host would then be able to address any other host using just its
+IP address, which is the host-to-host communication the comment refers to. With NAT and
+IP masquerading however, a host may be ``hidden'' behind a network address translator
+(i.e. a router with NAT configured), along with other hosts behind the same router. As
+such a host can't uniquely identify a host using an IP address anymore. More information
+is needed, such as a port number. The NAT protocol changes the IP addresses when
+resolving to the host in the local network. This way, the exact IP address is not used
+in the full communication process and the NAT-router intervenes with IP datagrams.

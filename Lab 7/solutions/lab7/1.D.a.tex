@@ -1,8 +1,20 @@
-When downloading a file from an FTP server, we see that a PORT command is sent by the client before the transfer starts.
+When downloading a file from an FTP server, we see that a PORT command is sent by the client
+before the transfer starts.
 This is where the payload of FTP data carries information on IP addresses. \\ 
-A client sends a PORT command to an FTP server to set up active mode. In active mode, an FTP server will initiate a connection to the client, instead of waiting for a connection attempt from the client. It can connect to the client, because the client has specified the address and port number it is listening on in the PORT command. \\
+A client sends a PORT command to an FTP server to set up active mode. In active mode, an FTP
+server will initiate a connection to the client, instead of waiting for a connection attempt
+from the client. It can connect to the client, because the client has specified the address
+and port number it is listening on in the PORT command. \\
 
-Examples of PORT commands: packet no. 48 in "/Lab 7/traces/1.D.PC3.pcap", packet no. 29 and 79 in "/Lab 7/traces/1.D.PC4.pcap" \\
+Examples of PORT commands: packet no. 48 in ``/Lab 7/traces/1.D.PC3.pcap'', packet no. 29 and
+79 in ``/Lab 7/traces/1.D.PC4.pcap'' \\
 
-We note that packet 48 is sent by PC3 and is captured before going through Router2. Packet 79 is this same packet after going through Router2. \\
-We can see that after the address translation, the address has also been changed in the FTP payload, thus solving the problem of sending the IP address as part of the data payload of the IP packet. The FTP-DATA has destination 200.0.0.2:51441, this goes to Router2, and then is sent to PC3.
+We note that packet 48 is sent by PC3 and is captured before going through Router2. Packet 79
+is this same packet after going through Router2. \\
+We can see that after the address translation, the address has also been changed in the FTP
+payload. This is possible because the network address translator knows about the FTP protocol,
+so it also knows where to find IP addresses in the payload. In addition of translating the
+IP addresses in the IP header, it will also translate those found in the payload. This, of course,
+won't work with any protocols that the translator doesn't know. \\
+In our case, the FTP-DATA has destination 200.0.0.2:51441, this goes to Router2, and then is
+sent to PC3.
