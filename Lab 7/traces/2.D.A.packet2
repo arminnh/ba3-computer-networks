@@ -1,0 +1,95 @@
+No.     Time        Source                Destination           Protocol Length Info
+      6 3.870092    10.0.3.1              10.0.3.4              DHCP     342    DHCP Offer    - Transaction ID 0xb0203025
+
+Frame 6: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Apr 18, 2016 11:51:41.180514000 CEST
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1460973101.180514000 seconds
+    [Time delta from previous captured frame: 0.006143000 seconds]
+    [Time delta from previous displayed frame: 0.006143000 seconds]
+    [Time since reference or first frame: 3.870092000 seconds]
+    Frame Number: 6
+    Frame Length: 342 bytes (2736 bits)
+    Capture Length: 342 bytes (2736 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:udp:bootp]
+    [Coloring Rule Name: UDP]
+    [Coloring Rule String: udp]
+Ethernet II, Src: Cisco_f5:ff:4c (00:0e:83:f5:ff:4c), Dst: IntelCor_1a:80:18 (68:05:ca:1a:80:18)
+    Destination: IntelCor_1a:80:18 (68:05:ca:1a:80:18)
+        Address: IntelCor_1a:80:18 (68:05:ca:1a:80:18)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: Cisco_f5:ff:4c (00:0e:83:f5:ff:4c)
+        Address: Cisco_f5:ff:4c (00:0e:83:f5:ff:4c)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IP (0x0800)
+Internet Protocol Version 4, Src: 10.0.3.1 (10.0.3.1), Dst: 10.0.3.4 (10.0.3.4)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x00 (DSCP 0x00: Default; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+        0000 00.. = Differentiated Services Codepoint: Default (0x00)
+        .... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)
+    Total Length: 328
+    Identification: 0x000c (12)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 255
+    Protocol: UDP (17)
+    Header checksum: 0xa094 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 10.0.3.1 (10.0.3.1)
+    Destination: 10.0.3.4 (10.0.3.4)
+    [Source GeoIP: Unknown]
+    [Destination GeoIP: Unknown]
+User Datagram Protocol, Src Port: bootps (67), Dst Port: bootpc (68)
+    Source port: bootps (67)
+    Destination port: bootpc (68)
+    Length: 308
+    Checksum: 0xb3f2 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+Bootstrap Protocol
+    Message type: Boot Reply (2)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 1
+    Transaction ID: 0xb0203025
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+        0... .... .... .... = Broadcast flag: Unicast
+        .000 0000 0000 0000 = Reserved flags: 0x0000
+    Client IP address: 0.0.0.0 (0.0.0.0)
+    Your (client) IP address: 10.0.3.4 (10.0.3.4)
+    Next server IP address: 10.0.2.21 (10.0.2.21)
+    Relay agent IP address: 10.0.3.1 (10.0.3.1)
+    Client MAC address: IntelCor_1a:80:18 (68:05:ca:1a:80:18)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type
+        Length: 1
+        DHCP: Offer (2)
+    Option: (54) DHCP Server Identifier
+        Length: 4
+        DHCP Server Identifier: 10.0.2.21 (10.0.2.21)
+    Option: (51) IP Address Lease Time
+        Length: 4
+        IP Address Lease Time: (600s) 10 minutes
+    Option: (1) Subnet Mask
+        Length: 4
+        Subnet Mask: 255.255.255.0 (255.255.255.0)
+    Option: (3) Router
+        Length: 4
+        Router: 10.0.3.1 (10.0.3.1)
+    Option: (255) End
+        Option End: 255
+    Padding

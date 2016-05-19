@@ -6,9 +6,8 @@ In de rfc staat
    (68). A server with multiple network address (e.g., a multi-homed
    host) MAY use any of its network addresses in outgoing DHCP messages.
 \end{lstlisting}
-???? \\
 
-Op SO: \\
-http://superuser.com/questions/927849/why-does-dhcp-uses-udp-port-67-and-68-for-the-communication-between-the-client-a \\
-http://serverfault.com/questions/517223/why-does-dhcp-have-fixed-client-and-server-port-numbers \\
-http://stackoverflow.com/questions/1790960/why-dhcp-client-listens-on-port-68
+DHCP is based on the BOOTP protocol (described in RFC951), in section 4.1.b it is stated that it is possible that a broadcast is sent by the server. This would happen when the transmitter lacks the capability to contruct an ARP cache entry. (This is not the case in our observations).\\
+When a ephemeral port is used, it can occur that this broadcast arrives at other hosts which might have another protocol running at this port. \\
+
+The use of a fixed port at the client's side is introduced to tackle this problem. It prevents an application to receive packets from a different protocol.

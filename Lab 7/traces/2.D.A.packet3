@@ -1,0 +1,107 @@
+No.     Time        Source                Destination           Protocol Length Info
+      7 3.870290    0.0.0.0               255.255.255.255       DHCP     342    DHCP Request  - Transaction ID 0xb0203025
+
+Frame 7: 342 bytes on wire (2736 bits), 342 bytes captured (2736 bits)
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Apr 18, 2016 11:51:41.180712000 CEST
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1460973101.180712000 seconds
+    [Time delta from previous captured frame: 0.000198000 seconds]
+    [Time delta from previous displayed frame: 0.000198000 seconds]
+    [Time since reference or first frame: 3.870290000 seconds]
+    Frame Number: 7
+    Frame Length: 342 bytes (2736 bits)
+    Capture Length: 342 bytes (2736 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ip:udp:bootp]
+    [Coloring Rule Name: UDP]
+    [Coloring Rule String: udp]
+Ethernet II, Src: IntelCor_1a:80:18 (68:05:ca:1a:80:18), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+        Address: Broadcast (ff:ff:ff:ff:ff:ff)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...1 .... .... .... .... = IG bit: Group address (multicast/broadcast)
+    Source: IntelCor_1a:80:18 (68:05:ca:1a:80:18)
+        Address: IntelCor_1a:80:18 (68:05:ca:1a:80:18)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IP (0x0800)
+Internet Protocol Version 4, Src: 0.0.0.0 (0.0.0.0), Dst: 255.255.255.255 (255.255.255.255)
+    Version: 4
+    Header length: 20 bytes
+    Differentiated Services Field: 0x10 (DSCP 0x04: Unknown DSCP; ECN: 0x00: Not-ECT (Not ECN-Capable Transport))
+        0001 00.. = Differentiated Services Codepoint: Unknown (0x04)
+        .... ..00 = Explicit Congestion Notification: Not-ECT (Not ECN-Capable Transport) (0x00)
+    Total Length: 328
+    Identification: 0x0000 (0)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment offset: 0
+    Time to live: 128
+    Protocol: UDP (17)
+    Header checksum: 0x3996 [correct]
+        [Good: True]
+        [Bad: False]
+    Source: 0.0.0.0 (0.0.0.0)
+    Destination: 255.255.255.255 (255.255.255.255)
+    [Source GeoIP: Unknown]
+    [Destination GeoIP: Unknown]
+User Datagram Protocol, Src Port: bootpc (68), Dst Port: bootps (67)
+    Source port: bootpc (68)
+    Destination port: bootps (67)
+    Length: 308
+    Checksum: 0x22b6 [validation disabled]
+        [Good Checksum: False]
+        [Bad Checksum: False]
+Bootstrap Protocol
+    Message type: Boot Request (1)
+    Hardware type: Ethernet (0x01)
+    Hardware address length: 6
+    Hops: 0
+    Transaction ID: 0xb0203025
+    Seconds elapsed: 0
+    Bootp flags: 0x0000 (Unicast)
+        0... .... .... .... = Broadcast flag: Unicast
+        .000 0000 0000 0000 = Reserved flags: 0x0000
+    Client IP address: 0.0.0.0 (0.0.0.0)
+    Your (client) IP address: 0.0.0.0 (0.0.0.0)
+    Next server IP address: 0.0.0.0 (0.0.0.0)
+    Relay agent IP address: 0.0.0.0 (0.0.0.0)
+    Client MAC address: IntelCor_1a:80:18 (68:05:ca:1a:80:18)
+    Client hardware address padding: 00000000000000000000
+    Server host name not given
+    Boot file name not given
+    Magic cookie: DHCP
+    Option: (53) DHCP Message Type
+        Length: 1
+        DHCP: Request (3)
+    Option: (54) DHCP Server Identifier
+        Length: 4
+        DHCP Server Identifier: 10.0.2.21 (10.0.2.21)
+    Option: (50) Requested IP Address
+        Length: 4
+        Requested IP Address: 10.0.3.4 (10.0.3.4)
+    Option: (12) Host Name
+        Length: 7
+        Host Name: lab2pc1
+    Option: (55) Parameter Request List
+        Length: 13
+        Parameter Request List Item: (1) Subnet Mask
+        Parameter Request List Item: (28) Broadcast Address
+        Parameter Request List Item: (2) Time Offset
+        Parameter Request List Item: (3) Router
+        Parameter Request List Item: (15) Domain Name
+        Parameter Request List Item: (6) Domain Name Server
+        Parameter Request List Item: (119) Domain Search
+        Parameter Request List Item: (12) Host Name
+        Parameter Request List Item: (44) NetBIOS over TCP/IP Name Server
+        Parameter Request List Item: (47) NetBIOS over TCP/IP Scope
+        Parameter Request List Item: (26) Interface MTU
+        Parameter Request List Item: (121) Classless Static Route
+        Parameter Request List Item: (42) Network Time Protocol Servers
+    Option: (255) End
+        Option End: 255
+    Padding

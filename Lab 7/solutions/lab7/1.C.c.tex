@@ -1,1 +1,13 @@
-*** Missing wireshark files ***
+In de rfc staat
+\begin{lstlisting}
+   DHCP uses UDP as its transport protocol.  DHCP messages from a client
+   to a server are sent to the 'DHCP server' port (67), and DHCP
+   messages from a server to a client are sent to the 'DHCP client' port
+   (68). A server with multiple network address (e.g., a multi-homed
+   host) MAY use any of its network addresses in outgoing DHCP messages.
+\end{lstlisting}
+
+DHCP is based on the BOOTP protocol (described in RFC951), in section 4.1.b it is stated that it is possible that a broadcast is sent by the server. This would happen when the transmitter lacks the capability to contruct an ARP cache entry. (This is not the case in our observations).\\
+When a ephemeral port is used, it can occur that this broadcast arrives at other hosts which might have another protocol running at this port. \\
+
+The use of a fixed port at the client's side is introduced to tackle this problem. It prevents an application to receive packets from a different protocol.
